@@ -1,0 +1,119 @@
+                       SGT: Static GetText
+                         By Jim Babcock
+
+Introduction
+
+    Translating a program from English into another language can be a difficult
+and time-consuming task, but it doesn't have to be. SGT (pronounced Sergeant)
+makes it easy to translate a program into other languages, regardless of what
+platform that program is for, and without increasing the program's size or
+using any extra memory.
+    SGT is similar to the GNU gettext library, and in fact it uses the same
+tools for managing translated strings, but unlike GNU gettext it has no runtime
+overhead whatsoever. Because it works entirely at compile time, it is
+particularly well suited to use with calculators.
+
+
+The Translator's View
+
+    Translating a program is easy, and doesn't require any knowledge of
+programming. This means that the translation doesn't have to be done by the
+programmer, so it doesn't matter if the programmer only speaks one language.
+The translator will receive, from the programmer, a text file that looks
+something like this:
+
+    #: game.c:31
+    msgid "New game\n"
+    msgstr ""
+    
+    #: game.c:32
+    msgid "Restore game\n"
+    msgstr ""
+
+    The first line tells the translator where, in the source code, the string
+is found. He can ignore this, unless he decides he needs to look at the context.
+The second line is the untranslated string. (Usually, this is English, but if
+the program was written in another language, it could be in that language
+instead.)
+    The translator's job is to fill in the msgstr with an appropriate
+translation of the msgid string. That's it; you don't have to look at code
+at all. When everything is translated, the translator sends it to the
+programmer.
+
+The Programmer's View
+
+    Internationalizing a program is easy, and doesn't require any knowledge of
+languages. This means that the programmer can be an American. First, install
+sgt and make sure it's working (See the section 'setup' in this readme.) That
+done, the programmer has to set up the program to use sgt. To do this, modify
+the compiler invocation.
+
+The original command
+   tigcc -O2 -o game.o -c game.c
+Is replaced with
+   sgt -l messages.po -o game.o tigcc -O2 -c game.c
+
+Two things are changed. First, the "-l messages.po" option has been added.
+This tells sgt where to look for strings it needs to translate. You will
+make the messages.po file later. Second, the program running is sgt, instead
+of tigcc. Sgt will run tigcc (or whatever compiler you tell it to use) for
+you, but the input tigcc receives will be translated.  Specifically, the
+command shown does this:
+   tigcc -E -o game.o.i -O2 -c game.c
+   (sgt now modifies the file game.o.i)
+   tigcc -o game.o -O2 -c game.o.i
+The first command runs the preprocessor only, with the output directed to an
+intermediate file. Sgt then goes through this file looking for strings marked
+as needing translation. When everything has been translated, it runs the
+compiler regularly, but with the input coming from the modified file.
+
+    Now, you need to go through your program and mark which strings need
+translation by enclosing them in the pseudo-macro gettext(), like this:
+        The original line
+           printf("Hello, world!\n");
+        Should be replaced with
+           printf(gettext("Hello, world!\n"));
+On the other hand, the line:
+   printf("%li %s %li\n", number, name, score);
+Requires no translation, and should not be changed. (This is why sgt will not
+automatically translate every string for you.) You can use gettext() anywhere,
+even in places where function calls wouldn't be allowed, like in tables.
+There is no performance or memory penalty for using gettext.
+
+    When you have marked all of the strings you think should be translated,
+run the xgettext program, like this:
+    xgettext *.c *.h
+(or whatever pattern will include all of your program's source files.) This
+will produce a file called messages.po (remember, the invocation of sgt
+referred to this file.)
+    Go ahead and compile your program now, to make sure you haven't introduced
+any typos when you added the gettext() references, and that the sgt invocation
+is correct.
+    Send the file messages.po to someone who will translate for you, and have
+them send back the filled-in file. When you want to compile in that language,
+just replace messages.po with the file they send you.
+    That's it! You may still find that some grammatical issues come up, that
+you have to translate text appearing in images by hand and such, but your
+program will, for the most part, work correctly in whatever language you like.
+
+
+Setup
+
+    Translators do not need to install sgt. Installation is only required
+if you are compiling a program which needs translation, or if you want to
+prepare a program for translation.
+    This version of SGT requires Cygwin. If you do not have Cygwin, go to
+<http://www.cgwin.com/>, and download and install it. When you install, be
+sure to install the package "gettext-devel".
+    If you do have Cygwin, make sure you have the GNU gettext tools installed.
+While sgt is not gettext, it uses the same format for translation catalogs
+and so the same tools are used. In particular, make sure the "xgettext"
+program is on your path.
+    Copy the sgt.exe program onto your path, such as to $CYGWIN/usr/bin, and
+make sure it runs correctly. If it doesn't, it probably means that you are
+using a version of Cygwin different from the one for which the binary was
+compiled, and you will have to recompile it yourself. Just remove the old
+sgt.exe, and run 'make'.
+
+
+

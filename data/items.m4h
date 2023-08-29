@@ -1,0 +1,207 @@
+#define WEAPONTYPE_BOW       1
+#define WEAPONTYPE_CROSSBOW  2
+#define WEAPONTYPE_CLUB      3
+#define WEAPONTYPE_DAGGER    4
+#define WEAPONTYPE_STAFF     5
+#define WEAPONTYPE_MACE      6
+#define WEAPONTYPE_SWORD     7
+#define WEAPONTYPE_AXE       8
+
+//{{{ Item flags
+#define FLAGS_GOLD           (ITEMFLAG_STACK  | ITEMFLAG_RUSTPROOF | ITEMFLAG_AUTOID  | ITEMFLAG_CURRENCY)
+#define FLAGS_KEY            (ITEMFLAG_USABLE | ITEMFLAG_RUSTPROOF | ITEMFLAG_AUTOID)
+#define FLAGS_POTION         (ITEMFLAG_USABLE | ITEMFLAG_STACK     | ITEMFLAG_FRAGILE | ITEMFLAG_RUSTPROOF)
+#define FLAGS_SCROLL         (ITEMFLAG_USABLE | ITEMFLAG_STACK     | ITEMFLAG_RUSTPROOF)
+#define FLAGS_FOOD           (ITEMFLAG_USABLE | ITEMFLAG_STACK     | ITEMFLAG_RUSTPROOF | ITEMFLAG_AUTOID)
+#define FLAGS_BOOK           (ITEMFLAG_USABLE | ITEMFLAG_RUSTPROOF)
+#define FLAGS_SPELLBOOK      (ITEMFLAG_USABLE | ITEMFLAG_RUSTPROOF | ITEMFLAG_HIDECHARGE)
+#define FLAGS_WAND           (ITEMFLAG_USABLE | ITEMFLAG_RUSTPROOF | ITEMFLAG_CHARGED)
+#define FLAGS_GEM            (ITEMFLAG_STACK  | ITEMFLAG_RUSTPROOF)
+#define FLAGS_AMMO           (ITEMFLAG_STACK  | ITEMFLAG_RUSTPROOF | ITEMFLAG_PLUS | ITEMFLAG_AUTOID | ITEMFLAG_BREAKABLE)
+#define FLAGS_LAUNCHER       (ITEMFLAG_AUTOID | ITEMFLAG_RUSTPROOF | ITEMFLAG_PLUS)
+#define FLAGS_MAGICLAUNCHER  (                  ITEMFLAG_RUSTPROOF | ITEMFLAG_PLUS)
+
+#define FLAGS_WEAPON         (ITEMFLAG_AUTOID | ITEMFLAG_RUSTPROOF | ITEMFLAG_PLUS)
+#define FLAGS_METALWEAPON    (ITEMFLAG_AUTOID                      | ITEMFLAG_PLUS)
+
+#define FLAGS_TOOTH          (ITEMFLAG_STACK  | ITEMFLAG_RUSTPROOF | ITEMFLAG_AUTOID)
+#define FLAGS_TOOL           (ITEMFLAG_AUTOID | ITEMFLAG_RUSTPROOF | ITEMFLAG_USABLE)
+#define FLAGS_TOOL_WORN      (ITEMFLAG_AUTOID | ITEMFLAG_RUSTPROOF)
+#define FLAGS_TORCH          (ITEMFLAG_AUTOID | ITEMFLAG_RUSTPROOF | ITEMFLAG_FUELED)
+#define FLAGS_ARMOR          (ITEMFLAG_AUTOID | ITEMFLAG_RUSTPROOF | ITEMFLAG_PLUS)
+#define FLAGS_METALARMOR     (ITEMFLAG_AUTOID                      | ITEMFLAG_PLUS)
+#define FLAGS_MAGICARMOR     (ITEMFLAG_RUSTPROOF                   | ITEMFLAG_PLUS)
+#define FLAGS_MAGICMETALARMOR (                                   ITEMFLAG_PLUS)
+#define FLAGS_CURSED_ARMOR   (ITEMFLAG_RUSTPROOF | ITEMFLAG_PLUS  | ITEMFLAG_CURSED)
+
+#define FLAGS_RING           (ITEMFLAG_RUSTPROOF                    | ITEMFLAG_PLUS)
+#define FLAGS_RING_CHARGED   (ITEMFLAG_RUSTPROOF | ITEMFLAG_CHARGED | ITEMFLAG_PLUS)
+#define FLAGS_RING_FUELED    (ITEMFLAG_RUSTPROOF | ITEMFLAG_FUELED)
+#define FLAGS_CURSED_RING    (ITEMFLAG_RUSTPROOF | ITEMFLAG_CURSED  | ITEMFLAG_PLUS)
+#define FLAGS_AMULET         (ITEMFLAG_RUSTPROOF                    | ITEMFLAG_PLUS)
+//}}}
+//{{{ Item categories
+#define CAT_WEAP   0
+#define CAT_AMMO   1
+#define CAT_ARMR   2
+#define CAT_AMULET 3
+#define CAT_RING   4
+#define CAT_WAND   5
+#define CAT_POTN   6
+#define CAT_SCRL   7
+#define CAT_BOOK   8
+#define CAT_FOOD   9
+#define CAT_GEM    10
+#define CAT_MONEY  11
+#define CAT_TOOL   12
+//}}}
+
+//{{{
+#define STAT_ADD(stat, amount) \
+	uint: PROPERTY_WORN_STAT_EFFECT; \
+	uchar: STATMOD_ADD;              \
+	uchar: stat;                     \
+	sint: amount;                    
+//}}}
+//{{{
+#define STAT_ADDP(stat, amount) \
+	uint: PROPERTY_WORN_STAT_EFFECT; \
+	uchar: STATMOD_ADDPLUS;          \
+	uchar: stat;                     \
+	sint: amount;                    
+//}}}
+//{{{
+#define STAT_OR(stat, effect) \
+	uint: PROPERTY_WORN_STAT_EFFECT; \
+	uchar: STATMOD_OR;               \
+	uchar: stat;                     \
+	sint: effect;                    
+//}}}
+//{{{
+#define STAT_SET(stat, effect) \
+	uint: PROPERTY_WORN_STAT_EFFECT; \
+	uchar: STATMOD_SET;              \
+	uchar: stat;                     \
+	sint: effect;                    
+//}}}
+//{{{
+#define CARRIED_STAT_ADD(stat, amount)  \
+	uint: PROPERTY_CARRIED_EFFECT;      \
+	uchar: STATMOD_ADD;                 \
+	uchar: stat;                        \
+	sint: amount;
+//}}}
+//{{{
+#define CARRIED_STAT_ADDP(stat, amount) \
+	uint: PROPERTY_CARRIED_EFFECT;      \
+	uchar: STATMOD_ADDPLUS;             \
+	uchar: stat;                        \
+	sint: amount;
+//}}}
+//{{{
+#define CARRIED_STAT_OR(stat, amount)   \
+	uint: PROPERTY_CARRIED_EFFECT;      \
+	uchar: STATMOD_OR;                  \
+	uchar: stat;                        \
+	sint: amount;
+//}}}
+//{{{
+#define CARRIED_STAT_SET(stat, amount)  \
+	uint: PROPERTY_CARRIED_EFFECT;      \
+	uchar: STATMOD_SET;                 \
+	uchar: stat;                        \
+	sint: amount;
+//}}}
+//{{{
+#define FIRED_STAT_ADD(stat, amount)    \
+	uint: PROPERTY_THROWN_EFFECT;       \
+	uchar: STATMOD_ADD;                 \
+	uchar: stat;                        \
+	sint: amount;
+//}}}
+//{{{
+#define FIRED_STAT_ADDP(stat, amount)   \
+	uint: PROPERTY_THROWN_EFFECT;       \
+	uchar: STATMOD_ADDPLUS;             \
+	uchar: stat;                        \
+	sint: amount;
+//}}}
+//{{{
+#define FIRED_STAT_OR(stat, amount)     \
+	uint: PROPERTY_THROWN_EFFECT;       \
+	uchar: STATMOD_OR;                  \
+	uchar: stat;                        \
+	sint: amount;
+//}}}
+//{{{
+#define FIRED_STAT_SET(stat, amount)    \
+	uint: PROPERTY_THROWN_EFFECT;       \
+	uchar: STATMOD_SET;                 \
+	uchar: stat;                        \
+	sint: amount;
+//}}}
+//{{{
+#define LAUNCHFROM(launcher) \
+	uint: PROPERTY_LAUNCHER; \
+	uint: launcher;          \
+	uint: 0;
+//}}}
+//{{{
+#define USEEFFECT(effect) \
+	uint: PROPERTY_USE_EFFECT; \
+	link: effect;
+//}}}
+//{{{
+#define WEAREFFECT(effect) \
+	uint: PROPERTY_WEAR_FUNC; \
+	link: effect;
+//}}}
+//{{{
+#define BURN(func) \
+	uint: PROPERTY_BURN; \
+	link: func;
+//}}}
+//{{{
+#define THROWHITEFFECT(effect) \
+	uint: PROPERTY_THROW_HIT_EFFECT; \
+	link: effect;
+//}}}
+//{{{
+#define SCORE(value) \
+	uint: PROPERTY_SCORE;  \
+	uint: value;           \
+	uint: 0;
+//}}}
+//{{{
+#define INHERIT(parent) \
+	uint: PROPERTY_INHERIT; \
+	link: parent;
+//}}}
+
+m4_define(ITEM,
+ {@m4_define(ITEM_{@@}$2, numItems)
+  m4_divert(SEQUENCE_ITEMS)
+  splitpoint;
+  link:  ITYPE_{@@}$2;
+  
+  m4_divert(SEQUENCE_TABLES)
+  even;
+  export ITYPE_{@@}$2;
+  uint:   numItems;
+  link:   $4;
+  link:   $5;
+  uchar:  $1;  //drawchar
+  schar:  $11; //spot
+  uchar:  $10; //category
+  uint:   $6;  //flags
+  uint:   $8;  //weight
+  uint:   $9;  //value
+  uint:   $7;  //stacksize
+#ifdef SUPPORT_COLOR
+  uchar: $3; uchar: $3; // color
+#endif
+  uint: $12;   // num_effects
+  $13          // effects
+  m4_define({@numItems@}, m4_eval(numItems+1))
+ @})
+

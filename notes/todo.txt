@@ -1,0 +1,48 @@
+Creatures shouldn't dodge beneficial (healing) potions
+PALMOS: Support drag-from-anywhere
+PALMOS: Can't interrupt running
+Colored animations
+(Wizard) Windshield spell
+
+Make @ appearance an option
+-###-
+#---#
+#-#-#
+#----
+-####
+
+Fill out button list
+
+Secondary classes
+  X Fighter -> Knight
+  X   Quest found in city: kill a dragon in a cave
+  X   Digging required
+    Archer -> Assassin
+      Quest given by NPC in dungeon: kill the dwarftown smith
+  X Wizard -> Archmage
+  X   Explore tower
+    Priest -> Paladin
+      ??
+  X Necromancer -> Lich
+  X   Explore wizard's tower
+  Limit spells
+  Limit advancement
+
+PALMOS: Make a tutorial covering stylus input
+PALMOS: Put tooltips on the buttonbar
+PALMOS: At the 'you die' prompt, don't skip over with just one tap.
+PALMOS: Keyboard events don't interrupt run (?)
+PALMOS: Implement get_keyname()
+CONFIGURE: Support mere bourne shell
+CONFIGURE: Allow specifying options with parameters
+Monsters should set off traps
+There should perhaps be support for multi-tile monsters in the future
+Font-size options should affect more places
+Should have a 'pickup menu' for big piles rather than prompting on each item
+Should support directional entrance on step-stairs (esp. the city)
+Should have commands to split up stacks of items
+Support sharing of high scores over link, by merging scorefiles, or IR
+NetHack-style boulders (maybe), for special levels?
+Holes/trap door traps?
+Overview map
+

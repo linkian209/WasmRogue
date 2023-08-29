@@ -1,0 +1,56 @@
+Many header files are bilingual; they are included from both C and MiBIC
+source files. Thus, the following extra considerations apply:
+
+- No direct typedefs; use the TYPEDEF macro instead, like this:
+    TYPEDEF(struct tile tile)
+  Also, when declaring an instance or member, do not use typedefed types;
+  use the struct/union keywords instead.
+
+- No direct use of the const keyword; use the CONST macro instead.
+
+- No comma-lists of variables/members. Ie instead of 'int x, y;' use
+  'int x; int y;'
+
+- When declaring a pointer to something which isn't defined from the data
+  file's point of view, wrap the declaration in DATA_WRAP_PTR. (This will
+  appear as void* in the data file.)
+
+- No function pointers. (Since calling conventions are very different, this
+  should be obvious.)
+
+Regardless of whether a header is meant to be bilingual or not, structures
+should be arranged and padded with extreme care, with the following rules:
+
+- Every element should start on its natural alignment with any padding
+  given explicitly. Alignments are as follows:
+    short,ushort,sshort      2
+    uint,sint                2 (typedefs for unsigned/signed short)
+    int, enum                N/A (undefined size - do not use)
+    float, double            N/A (do not use - use fixed point/fraction trick)
+    long,ulong,slong         4
+    pointer                  4
+    any struct or union      4
+
+- The total size of the struct must be 1, 2, or a multiple of four. If at
+  all possible, it should also be a power of 2.
+
+- If the structure has a tail array, it should be the last element and stated
+  to have size 1. Structures with tail arrays may only be instantiated in the
+  data file.
+
+- In a union of structs, all structs should be the same size.
+
+Finally, miscellaneous points:
+
+- Because of a bug in PRC-Tools, 'extern const' is not allowed. Use
+  extern ECONST instead.
+
+- Use of #ifdefs should be minimized in headers other than machdep.h. Put
+  system-specific definitions in sys/.../platform.h instead.
+
+- Prototypes should not appear in generic header files. Instead, refer to
+  proto.h and dllproto.h. Platform-specific functions are the exception, and
+  they go in platform.h.
+
+
+

@@ -1,0 +1,125 @@
+m4_define(numMaps, 0)
+
+//{{{ MAP
+m4_define(MAP,
+ {@m4_define(LEVEL_{@@}$1, numMaps) 
+  m4_divert(SEQUENCE_STRINGS)
+  splitpoint;
+  even;
+  export {@MAP@}{@@}numMaps{@@}NAME;
+  string: $2;
+  m4_divert(SEQUENCE_TABLES)
+  
+  splitpoint;
+  even;
+  
+  export MAP_{@@}$1;
+  link: {@MAP@}{@@}numMaps{@@}NAME;
+  link: $3;   //monster generation
+  link: $8;
+  link: $9;
+  link: $10;
+  uint: numMaps;
+  uint: $4;   //flags
+  uint: $5;   //difficulty
+  $6          //num_items
+  uint: $7;   //population
+  
+  m4_define({@numConnections@}, 0)
+  m4_divert(SEQUENCE_TEMP)
+  $11
+  m4_divert(SEQUENCE_TABLES)
+  uint: numConnections;
+  m4_undivert(SEQUENCE_TEMP)
+  m4_define({@numMaps@}, m4_eval(numMaps+1))
+ @})
+//}}}
+//{{{ GEN_MAP
+m4_define(GEN_MAP,
+ {@m4_divert(SEQUENCE_TABLES)
+  splitpoint;
+  even;
+  export MAPGEN_{@@}$1;
+  ushort: $3; // Size X
+  ushort: $4; // Size Y
+  uchar: $2; // Light
+  uchar: 0;  // padding
+  m4_esyscmd(tools/fixedmap.exe -d '$5')
+ @})
+//}}}
+
+//{{{ MAPCONN
+m4_define(MAPCONN,
+ {@m4_define({@numConnections@}, m4_eval(numConnections+1))
+  even;
+  uint:  $1;  // type
+  $2        // location (coord)
+  link:  $3;  // destination map
+  $4        // destination (coord)
+  even;
+ @})
+//}}}
+//{{{
+m4_define(MAPCONNFILL,
+ {@m4_define({@numConnections@}, m4_eval(numConnections+1))
+  even;
+  uint: MAPSPEC_CONNECT;  // type
+  $1        // location (coord)
+  link:  $2;  // destination map
+  $3        // destination (coord)
+  even;
+ @})
+
+//}}}
+
+//{{{ MAPLINK
+m4_define(MAPLINK,
+ {@m4_define({@numConnections@}, m4_eval(numConnections+1))
+  even;
+  sint: $1;  // type
+  $2       // location (coord)
+  link: $3;  // target
+  uchar: 0; uchar: 0; // padding
+  even;
+ @})
+//}}}
+//{{{
+m4_define(LINKUP,
+ {@MAPCONN(TILE_STAIRUP, {@coord(0,0)@}, {@$1@}, {@coord(0,0)@})
+ @})
+//}}}
+//{{{
+m4_define(LINKDN,
+ {@MAPCONN(TILE_STAIRDN, {@coord(0,0)@}, {@$1@}, {@coord(0,0)@})@}
+  )
+//}}}
+
+m4_define(MAPITEM, {@MAPLINK(MAPSPEC_ITEM, $1, $2)@})
+m4_define(MAPKEY, {@MAPLINK(MAPSPEC_KEY, coord(0,0), $1)@})
+
+//{{{
+m4_define(MAPSIGN,
+ {@m4_define({@numConnections@}, m4_eval(numConnections+1))
+  even;
+  uint: TILE_SIGN;  // type
+  $1       // location (coord)
+  uint: $2;  // target
+  uchar: 0; uchar: 0; // padding
+  uchar: 0; uchar: 0;
+  even;
+ @})
+//}}}
+//{{{
+m4_define(MAPFOUNTAIN,
+ {@m4_define({@numConnections@}, m4_eval(numConnections+1))
+  even;
+  uint: TILE_FOUNTAIN;  // type
+  $1       // location (coord)
+  uint: $2;  // type
+  uchar: 0; uchar: 0; // padding
+  uchar: 0; uchar: 0;
+  even;
+ @})
+//}}}
+
+

@@ -1,0 +1,36 @@
+# WasmRogue
+This is an effort to compile a beloved game from my high school time to web assembly so I can play it on my phone.
+
+# Old README
+First, run the 'configure' script. This requires that you have a Unix-like
+environment, preferrably either Linux or Cygwin. You will also need m4, a C
+compiler and a C++ compiler.
+
+Then, run either:
+  make all         (compile everything you can)
+  make computer    (compile for the native system only)
+  make ti89        (compile for only the TI-89)
+  make ti92p       (compile for only the TI-92+)
+  make palm        (compile for only PalmOS)
+  make clean       (remove intermediate files)
+  make tidy        (remove intermediate and output files)
+  make distclean   (remove intermediate files and configure settings)
+
+If you are using Windows you will need Cygwin, which can be obtained from
+http://www.cygwin.com/.
+
+To compile you will need m4. This should be available as a package for
+Cygwin/your distro; if not, get it from ftp://ftp.gnu.org/pub/gnu/m4/.
+
+To compile for TI calculators you will also need TIGCC (http://tigcc.ticalc.org)
+To compile for PalmOS you will need PRC-Tools (http://prc-tools.sourceforge.net)
+
+TIGCC can be obtained from http://tigcc.ticalc.org/. Note that you should use
+only the very most recent version of TIGCC with CalcRogue; older versions may
+not work, and have had bugs which affect CalcRogue.
+
+SGT (Static GetText) is now included in the CalcRogue source, so it does not
+need to be downloaded separately. The functions of ttbin2oth and par are now
+handled by the included CLuSS compiler, so they are not required. If you
+do not have TIGCC, you can still compile, just not for TI calculators. If you
+do not have PRC-Tools, you can still compile, just not for PalmOS.

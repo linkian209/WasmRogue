@@ -1,0 +1,35 @@
+
+PC_CC_OPTS += $(addprefix -I, $(INCLUDEPATH) sys/curses)
+PC_CC_OPTS += -DTARGET_LANGUAGE=$(LANGUAGE) -O2
+PC_CC_OPTS_TOOL += -Iinclude -O2 -DEXTERNAL_TOOL -Isys/tools
+
+COMP_CFILES := $(CFILES) $(DLL_CFILES) $(wildcard sys/curses/*.c)
+COMP_HFILES := $(wildcard sys/curses/*.h)
+COMP_OBJECTS:= $(foreach file, $(COMP_CFILES), $(basename $(notdir $(file))).pc.o)
+
+$(OBJDIR_PC) :
+	$(MKDIR) $(OBJDIR_PC)
+
+computer : $(OBJDIR_PC)/crogdat.dat $(OBJDIR_PC)/crogue.exe
+all: computer
+
+##
+## TARGET: Local computer
+##
+
+%.pc.o: %.c
+	$(echo) "  CC  " $<
+	$(Q)$(SGT) $(PC_CC_SGT) -o $@ $(PC_CC) $(PC_CC_OPTS) -c $<
+%.pc.o: sys/curses/%.c
+	$(echo) "  CC  " $<
+	$(Q)$(SGT) $(PC_CC_SGT) -o $@ $(PC_CC) $(PC_CC_OPTS) -c $<
+
+$(OBJDIR_PC)/crogue.exe: $(COMP_OBJECTS)
+	$(echo) "  LD  " $@
+	$(Q)$(PC_LD) -o $@ $^ $(PC_CC_LIBS)
+
+$(OBJDIR_PC)/crogdat.dat : gamedat.med.pc $(MKDAT)
+	$(echo) "  MKD " $<
+	$(Q)$(SGT) -o $@ $(MKDAT) -f native $(MKDATOPTS) $<
+
+

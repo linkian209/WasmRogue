@@ -1,0 +1,87 @@
+#include "resource.h"
+
+#include "gamedat.palm.rcp"
+
+//ICONFAMILY "icon_bw_32x22.bmp" "" "" "icon_color_32x22.bmp" TRANSPARENT 255 255 255
+//SMALLICONFAMILY "icon_bw_15x9.bmp" "" "" "icon_color_15x9.bmp" TRANSPARENT 255 255 255
+
+ICONFAMILY "icons/icon_22x22mono.bmp"
+           ""
+           ""
+           "icons/icon_22x22color.bmp"
+           TRANSPARENT 255 0 255
+SMALLICONFAMILY "icons/icon_15x9mono.bmp" "" "" "icons/icon_15x9color.bmp" TRANSPARENT 255 255 255
+
+BITMAPGREY ID bitmap_splash "splash_160x160.bmp"
+
+FONT ID FONT_5_6 FONTID TextFont "sys/palm/Font4x6Free.txt"
+
+FONT ID TILE_5_5S FONTID TileFont "fonttile5x5.txt"
+
+FONTFAMILY ID TILE_5_5 FONTID TileFont
+BEGIN
+	FONT "fonttile5x5.txt" DENSITY 72
+	FONT "fonttile10x10.txt" DENSITY 144
+END
+
+FONTFAMILY ID FONT_8_12 FONTID TextFont
+BEGIN
+	FONT "Font8x12Stub.txt" DENSITY 72
+	FONT "Font8x12.txt" DENSITY 144
+END
+
+VERSION ID 1 "Beta 6c"
+
+FORM MainForm AT (0 0 160 160)
+USABLE NOFRAME
+MENUID MainFormMenus
+BEGIN
+END
+
+MENU ID MainFormMenus
+BEGIN
+	PULLDOWN "Game"
+	BEGIN
+		MENUITEM "Options"           ID menucmd_options
+		MENUITEM "Help"              ID menucmd_help
+		MENUITEM "About"             ID menucmd_about
+		MENUITEM "Debug"             ID menucmd_debug
+		MENUITEM "Redraw screen"     ID menucmd_redraw
+		MENUITEM "Character info"    ID menucmd_character
+		MENUITEM "Message history"   ID menucmd_history
+		MENUITEM "Discoveries"       ID menucmd_discoveries
+		MENUITEM "Quit"              ID menucmd_quit
+	END
+	
+	PULLDOWN "Act"
+	BEGIN
+		MENUITEM "Wait"              ID menucmd_wait
+		MENUITEM "Climb stairs"      ID menucmd_climb
+		MENUITEM "Fire readied ammo" ID menucmd_fire
+		MENUITEM "Cast spell"        ID menucmd_spell
+		MENUITEM "Search"            ID menucmd_search
+		MENUITEM "Open door"         ID menucmd_open
+		MENUITEM "Close door"        ID menucmd_close
+	END
+	
+	PULLDOWN "Items"
+	BEGIN
+		MENUITEM "Inventory"         ID menucmd_inventory
+		MENUITEM "Use"               ID menucmd_use
+		MENUITEM "Equip item"        ID menucmd_equip
+		MENUITEM "Take off"          ID menucmd_takeoff
+		MENUITEM "Drop item"         ID menucmd_drop
+		MENUITEM "Pick up"           ID menucmd_pickup
+		MENUITEM "Throw"             ID menucmd_throw
+	END
+END
+
+ALERT ID DialogYesNo
+CONFIRMATION
+DEFAULTBUTTON 1
+BEGIN
+	TITLE ""
+	MESSAGE "^1"
+	BUTTON "Yes" "No"
+END
+

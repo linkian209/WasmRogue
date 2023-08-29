@@ -1,0 +1,15 @@
+Namespace pollution: LANGUAGE is taken up with some depracated crap, when
+  I want to use it for *real* localization.
+size_t not defined my palmOS.h for some reason
+FILE not defined by palmOS.h
+Missing functions: clrscr, time, free, strcpy, memset, min, max, memcpy, fopen, fclose, remove, fread, fwrite, strlen, strcat
+Analogous functions available for strcpy, memset, strlen, strcat
+MemMove analogous to memcpy, but with the wrong damn return type. WTF?
+prctools' headers are the most pathetic thing I've seen in a while. Not bothering, making my own wrapper macros.
+
+In unix_stdarg.h, va_arg is broken. Hopefully vsprintf isn't using it (yeah, right).
+In unix_string.h: memcpy does triple-evaluation on its first arguments. Worse than no macro at all!
+And the ONLY prototype of calloc in the ENTIRE api is in the freaking SOCKET library!
+Where the hell is vsscanf? Or for that matter, vcbprintf, or vsnprintf or anything which could be used to build something interesting?
+
+Include path: huffman.c -> SDK 5r3 -> include/keyboard.h! C'mon, angle brackets exist for a reason!

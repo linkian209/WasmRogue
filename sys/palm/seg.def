@@ -1,0 +1,8 @@
+
+application { "CalcRogue" cRog }
+
+multiple code {
+	sec_0 sec_1 sec_2 sec_3 sec_4
+	sec_5 sec_6 sec_7
+	}
+

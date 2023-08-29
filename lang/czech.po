@@ -1,0 +1,3592 @@
+# translation of cs.po to Cestina
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Thomas Navara <nobody@shalmirane.net>, 2004.
+#
+# This shouldn't be commented out, but it's not handled yet
+#msgid ""
+#msgstr ""
+#"Project-Id-Version: cs\n"
+#"Report-Msgid-Bugs-To: \n"
+#"POT-Creation-Date: 2004-04-26 06:33-0400\n"
+#"PO-Revision-Date: 2004-04-26 20:11+0200\n"
+#"Last-Translator: Thomas Navara <nobody@shalmirane.net>\n"
+#"Language-Team: Cestina <cs@li.org>\n"
+#"MIME-Version: 1.0\n"
+#"Content-Type: text/plain; charset=ISO-8859-2\n"
+#"Content-Transfer-Encoding: 8bit\n"
+#"X-Generator: KBabel 1.3.1\n"
+#
+#: data/items.m4:247
+msgid "short wand"
+msgstr "kratka hulka"
+
+#: data/items.m4:248
+msgid "long wand"
+msgstr "dlouha hulka"
+
+#: data/items.m4:249
+msgid "metal wand"
+msgstr "kovova hulka"
+
+#: data/items.m4:250
+msgid "glass wand"
+msgstr "sklenena hulka"
+
+#: data/items.m4:251
+msgid "copper wand"
+msgstr "medena hulka"
+
+#: data/items.m4:252
+msgid "crystal wand"
+msgstr "kristalova hulka"
+
+#: data/items.m4:253
+msgid "silver wand"
+msgstr "stribrna hulka"
+
+#: data/items.m4:254
+msgid "curved wand"
+msgstr "kriva hulka"
+
+#: data/items.m4:255
+msgid "iron wand"
+msgstr "zelezna hulka"
+
+#: data/items.m4:256
+msgid "maple wand"
+msgstr "javorova hulka"
+
+#: data/items.m4:261
+msgid "green potion"
+msgstr "zeleny lektvar"
+
+#: data/items.m4:262
+msgid "white potion"
+msgstr "bily lektvar"
+
+#: data/items.m4:263
+msgid "glowing potion"
+msgstr "zhavy lektvar"
+
+#: data/items.m4:264
+msgid "brown potion"
+msgstr "hnedy lektvar"
+
+#: data/items.m4:265
+msgid "yellow potion"
+msgstr "zluty lektvar"
+
+#: data/items.m4:266
+msgid "smoky potion"
+msgstr "kourovy lektvar"
+
+#: data/items.m4:267
+msgid "cloudy potion"
+msgstr "oblacny lektvar"
+
+#: data/items.m4:268
+msgid "thick potion"
+msgstr "kalny lektvar"
+
+#: data/items.m4:269
+msgid "swirly potion"
+msgstr "svistici lektvar"
+
+#: data/items.m4:270
+msgid "black potion"
+msgstr "cerny lektvar"
+
+#: data/items.m4:271
+msgid "blue potion"
+msgstr "modry lektvar"
+
+#: data/items.m4:272
+msgid "orange potion"
+msgstr "oranzovy lektvar"
+
+#: data/items.m4:273
+msgid "gray potion"
+msgstr "sedy lektvar"
+
+#: data/items.m4:274
+msgid "murky potion"
+msgstr "tmavy lektvar"
+
+#: data/items.m4:279
+msgid "crumpled scroll"
+msgstr "zmuchlany svitek"
+
+#: data/items.m4:280
+msgid "scribbled scroll"
+msgstr "nacmarany svitek"
+
+#: data/items.m4:281
+msgid "shimmering scroll"
+msgstr "zkrouceny svitek"
+
+#: data/items.m4:282
+msgid "stained scroll"
+msgstr "spinavy svitek"
+
+#: data/items.m4:283
+msgid "glowing scroll"
+msgstr "zhavy svitek"
+
+#: data/items.m4:284
+msgid "yellowed scroll"
+msgstr "zazloutly svitek"
+
+#: data/items.m4:289
+msgid "stone ring"
+msgstr "kamenny prsten"
+
+#: data/items.m4:290
+msgid "iron ring"
+msgstr "zelezny prsten"
+
+#: data/items.m4:291
+msgid "wooden ring"
+msgstr "dreveny prsten"
+
+#: data/items.m4:292
+msgid "ruby ring"
+msgstr "rubinovy prsten"
+
+#: data/items.m4:293
+msgid "sapphire ring"
+msgstr "safirovy prsten"
+
+#: data/items.m4:294
+msgid "silver ring"
+msgstr "stribrny prsten"
+
+#: data/items.m4:295
+msgid "gold ring"
+msgstr "zlaty prsten"
+
+#: data/items.m4:296
+msgid "platinum ring"
+msgstr "platinovy prsten"
+
+#: data/items.m4:297
+msgid "diamond ring"
+msgstr "diamantovy prsten"
+
+#: data/items.m4:298
+msgid "steel ring"
+msgstr "ocelovy prsten"
+
+#: data/items.m4:299
+msgid "glass ring"
+msgstr "skleneny prsten"
+
+#: data/items.m4:300
+msgid "emerald ring"
+msgstr "smaragdovy prsten"
+
+#: data/items.m4:301
+msgid "jet ring"
+msgstr "jantarovy prsten"
+
+#: data/items.m4:306
+msgid "shiny amulet"
+msgstr "blyskavy amulet"
+
+#: data/items.m4:307
+msgid "dull amulet"
+msgstr "matny amulet"
+
+#: data/items.m4:308
+msgid "square amulet"
+msgstr "ctvercovy amulet"
+
+#: data/items.m4:309
+msgid "spherical amulet"
+msgstr "kulaty amulet"
+
+#: data/items.m4:310
+msgid "triangular amulet"
+msgstr "trojhranny amulet"
+
+#: data/items.m4:330
+msgid "gold piece"
+msgstr "zlato"
+
+#: data/items.m4:339
+msgid "Amulet of Yendor"
+msgstr "Amulet of Yendor"
+
+#: data/items.m4:351
+msgid "rattlesnake tooth"
+msgstr "zuby chrestyse"
+
+#: data/items.m4:361
+msgid "wand of nothing"
+msgstr "hulka niceho"
+
+#: data/items.m4:370
+msgid "wand of striking"
+msgstr "hulka uderu"
+
+#: data/items.m4:379
+msgid "wand of digging"
+msgstr "hulka kopani"
+
+#: data/items.m4:388
+msgid "wand of light"
+msgstr "hulka svetla"
+
+#: data/items.m4:397
+msgid "wand of detection"
+msgstr "hulka detekce"
+
+#: data/items.m4:406
+msgid "wand of lightning"
+msgstr "hulka blesku"
+
+#: data/items.m4:415
+msgid "wand of fire"
+msgstr "hulka ohne"
+
+#: data/items.m4:434
+msgid "empty bottle"
+msgstr "prazdna lahev"
+
+#: data/items.m4:443 data/items.m4:452 data/items.m4:461 data/items.m4:470
+#: data/items.m4:479 data/items.m4:488
+msgid "bottle of water"
+msgstr "lahev vody"
+
+#: data/items.m4:497
+msgid "potion of healing"
+msgstr "lektvar leceni"
+
+#: data/items.m4:507
+msgid "potion of extra healing"
+msgstr "lektvar extra leceni"
+
+#: data/items.m4:517
+msgid "potion of full healing"
+msgstr "lektvar kompletniho leceni"
+
+#: data/items.m4:527
+msgid "potion of sickness"
+msgstr "lektvar nemoci"
+
+#: data/items.m4:537
+msgid "potion of hallucination"
+msgstr "lektvar halucinaci"
+
+#: data/items.m4:547
+msgid "potion of confusion"
+msgstr "lektvar zmateni"
+
+#: data/items.m4:557
+msgid "potion of object detection"
+msgstr "lektvar detekce predmetu"
+
+#: data/items.m4:566
+msgid "potion of numbness"
+msgstr "lektvar znecitliveni"
+
+#: data/items.m4:575
+msgid "potion of gain strength"
+msgstr "lektvar sily"
+
+#: data/items.m4:584
+msgid "potion of gain dexterity"
+msgstr "lektvar obratnosti"
+
+#: data/items.m4:593
+msgid "potion of gain toughness"
+msgstr "lektvar odolnosti"
+
+#: data/items.m4:602
+msgid "potion of gain mana"
+msgstr "lektvar magie"
+
+#: data/items.m4:611
+msgid "potion of gain willpower"
+msgstr "lektvar sily vule"
+
+#: data/items.m4:620
+msgid "potion of restore ability"
+msgstr "lektvar navraceni schopnosti"
+
+#: data/items.m4:630
+msgid "scroll of blank paper"
+msgstr "prazdny svitek"
+
+#: data/items.m4:631
+msgid "unlabelled scroll"
+msgstr "nenadepsany svitek"
+
+#: data/items.m4:640
+msgid "scroll of magic mapping"
+msgstr "svitek magickeho mapovani"
+
+#: data/items.m4:649
+msgid "scroll of teleportation"
+msgstr "svitek teleportace"
+
+#: data/items.m4:658
+msgid "scroll of identify"
+msgstr "svitek identifikace"
+
+#: data/items.m4:667
+msgid "scroll of remove curse"
+msgstr "svitek odstraneni kletby"
+
+#: data/items.m4:676
+msgid "scroll of create monsters"
+msgstr "svitek tvorby nepratel"
+
+#: data/items.m4:685
+msgid "scroll of enchanting"
+msgstr "svitek okouzleni"
+
+#: data/items.m4:695
+msgid "cross"
+msgstr "kriz"
+
+#: data/items.m4:704
+msgid "pick-axe"
+msgstr "krumpac"
+
+#: data/items.m4:714
+msgid "food ration"
+msgstr "jidlo"
+
+#: data/items.m4:724
+msgid "diamond"
+msgstr "diamant"
+
+#: data/items.m4:725 data/items.m4:833 data/items.m4:914
+msgid "white gem"
+msgstr "bily drahokam"
+
+#: data/items.m4:733
+msgid "ruby"
+msgstr "rubin"
+
+#: data/items.m4:734 data/items.m4:851 data/items.m4:869 data/items.m4:922
+msgid "red gem"
+msgstr "cerveny drahokam"
+
+#: data/items.m4:742
+msgid "jacinth stone"
+msgstr "jacintovy kamen"
+
+#: data/items.m4:743 data/items.m4:896 data/items.m4:930
+msgid "orange gem"
+msgstr "oranzovy drahokam"
+
+#: data/items.m4:751
+msgid "sapphire"
+msgstr "safir"
+
+#: data/items.m4:752 data/items.m4:779 data/items.m4:788 data/items.m4:938
+msgid "blue gem"
+msgstr "modry drahokam"
+
+#: data/items.m4:760
+msgid "black opal"
+msgstr "cerny opal"
+
+#: data/items.m4:761 data/items.m4:824 data/items.m4:905 data/items.m4:946
+msgid "black gem"
+msgstr "cerny drahokam"
+
+#: data/items.m4:769
+msgid "emerald"
+msgstr "smaragd"
+
+#: data/items.m4:770 data/items.m4:878 data/items.m4:887 data/items.m4:954
+msgid "green gem"
+msgstr "zeleny drahokam"
+
+#: data/items.m4:778
+msgid "turquoise stone"
+msgstr "tyrkys"
+
+#: data/items.m4:787
+msgid "aquamarine stone"
+msgstr "akvamarinovy kamen"
+
+#: data/items.m4:796
+msgid "citrine stone"
+msgstr "citrin"
+
+#: data/items.m4:797 data/items.m4:842 data/items.m4:962
+msgid "yellow gem"
+msgstr "zluty drahokam"
+
+#: data/items.m4:805
+msgid "amber stone"
+msgstr "jantar"
+
+#: data/items.m4:806 data/items.m4:815
+msgid "yellowish brown gem"
+msgstr "zluto-hnedy drahokam"
+
+#: data/items.m4:814
+msgid "topaz stone"
+msgstr "topaz"
+
+#: data/items.m4:823
+msgid "jet stone"
+msgstr "jantar"
+
+#: data/items.m4:832
+msgid "opal"
+msgstr "opal"
+
+#: data/items.m4:841
+msgid "chrysoberyl stone"
+msgstr "chrysopas"
+
+#: data/items.m4:850
+msgid "garnet stone"
+msgstr "granat (drahokam)"
+
+#: data/items.m4:859
+msgid "amethyst stone"
+msgstr "ametyst"
+
+#: data/items.m4:860 data/items.m4:970
+msgid "violet gem"
+msgstr "fialovy drahokam"
+
+#: data/items.m4:868
+msgid "jasper stone"
+msgstr "jaspis"
+
+#: data/items.m4:877
+msgid "fluorite stone"
+msgstr "fosforeskujici kamen"
+
+#: data/items.m4:886
+msgid "jade stone"
+msgstr "nefrit"
+
+#: data/items.m4:895
+msgid "agate stone"
+msgstr "achat"
+
+#: data/items.m4:904
+msgid "obsidian stone"
+msgstr "obsidian"
+
+#: data/items.m4:913
+msgid "worthless piece of white glass"
+msgstr "bezcenny kus bileho skla"
+
+#: data/items.m4:921
+msgid "worthless piece of red glass"
+msgstr "bezcenny kus cerveneho skla"
+
+#: data/items.m4:929
+msgid "worthless piece of orange glass"
+msgstr "bezcenny kus oranzoveho skla"
+
+#: data/items.m4:937
+msgid "worthless piece of blue glass"
+msgstr "bezcenny kus modreho skla"
+
+#: data/items.m4:945
+msgid "worthless piece of black glass"
+msgstr "bezcenny kus cerneho skla"
+
+#: data/items.m4:953
+msgid "worthless piece of green glass"
+msgstr "bezcenny kus zeleneho skla"
+
+#: data/items.m4:961
+msgid "worthless piece of yellow glass"
+msgstr "bezcenny kus zluteho skla"
+
+#: data/items.m4:969
+msgid "worthless piece of violet glass"
+msgstr "bezcenny kus fialoveho skla"
+
+#: data/items.m4:977
+msgid "piece of illuminyte"
+msgstr "kousek \"illuminyte\""
+
+#: data/items.m4:978
+msgid "glowing rock"
+msgstr "zhnouci kamen"
+
+#: data/items.m4:989
+msgid "arrow"
+msgstr "sip"
+
+#: data/items.m4:1002
+msgid "bolt"
+msgstr "sipka"
+
+#: data/items.m4:1015
+msgid "silver arrow"
+msgstr "stribrny sip"
+
+#: data/items.m4:1028
+msgid "silver bolt"
+msgstr "stribrna sipka"
+
+#: data/items.m4:1045
+msgid "club"
+msgstr "kyj"
+
+#: data/items.m4:1058
+msgid "dagger"
+msgstr "dyka"
+
+#: data/items.m4:1074
+msgid "quarterstaff"
+msgstr "obusek"
+
+#: data/items.m4:1088
+msgid "mace"
+msgstr "palcat"
+
+#: data/items.m4:1101
+msgid "sword"
+msgstr "mec"
+
+#: data/items.m4:1114
+msgid "axe"
+msgstr "sekera"
+
+#: data/items.m4:1128
+msgid "crystal dagger"
+msgstr "kristalova dyka"
+
+#: data/items.m4:1144
+msgid "silver dagger"
+msgstr "stribrna dyka"
+
+#: data/items.m4:1160
+msgid "silver-shod quarterstaff"
+msgstr "stribrny obusek"
+
+#: data/items.m4:1174
+msgid "silver mace"
+msgstr "stribrny palcat"
+
+#: data/items.m4:1187
+msgid "silver longsword"
+msgstr "stribrny dlouhy mec"
+
+#: data/items.m4:1200
+msgid "silver axe"
+msgstr "stribrna sekera"
+
+#: data/items.m4:1214 data/items.m4:1247
+msgid "bow"
+msgstr "luk"
+
+#: data/items.m4:1230 data/items.m4:1263
+msgid "crossbow"
+msgstr "kuse"
+
+#: data/items.m4:1246
+msgid "bow of accuracy"
+msgstr "luk presnosti"
+
+#: data/items.m4:1262
+msgid "crossbow of force"
+msgstr "kuse sily"
+
+#: data/items.m4:1279
+msgid "leather armor"
+msgstr "kozena zbroj"
+
+#: data/items.m4:1290
+msgid "chain armor"
+msgstr "supinova zbroj"
+
+#: data/items.m4:1302
+msgid "ring armor"
+msgstr "krouzkova zbroj"
+
+#: data/items.m4:1314
+msgid "plate armor"
+msgstr "platova zbroj"
+
+#: data/items.m4:1326
+msgid "dwarfish mithril armor"
+msgstr "trpaslici mithrilova zbroj"
+
+#: data/items.m4:1338 data/items.m4:1349
+msgid "cloak"
+msgstr "plast"
+
+#: data/items.m4:1348
+msgid "cloak of invulnerability"
+msgstr "plast nezranitelnosti"
+
+#: data/items.m4:1362
+msgid "leather cap"
+msgstr "kozena capka"
+
+#: data/items.m4:1372 data/items.m4:1385 data/items.m4:1398
+msgid "iron helmet"
+msgstr "zelezna helma"
+
+#: data/items.m4:1384
+msgid "helm of seeing"
+msgstr "helma videni"
+
+#: data/items.m4:1397
+msgid "helm of delusion"
+msgstr "helma preludu"
+
+#: data/items.m4:1411
+msgid "brass lantern"
+msgstr "mosazna lucerna"
+
+#: data/items.m4:1421
+msgid "torch"
+msgstr "pochoden"
+
+#: data/items.m4:1433
+msgid "small shield"
+msgstr "maly stit"
+
+#: data/items.m4:1443
+msgid "medium shield"
+msgstr "stit"
+
+#: data/items.m4:1453
+msgid "large shield"
+msgstr "velky stit"
+
+#: data/items.m4:1465
+msgid "pair of gloves"
+msgstr "kozene rukavice"
+
+#: data/items.m4:1476 data/items.m4:1488
+msgid "pair of gauntlets"
+msgstr "kovove rukavice"
+
+#: data/items.m4:1487
+msgid "gauntlets of power"
+msgstr "rukavice sily"
+
+#: data/items.m4:1500 data/items.m4:1512 data/items.m4:1524
+msgid "boots"
+msgstr "boty"
+
+#: data/items.m4:1511
+msgid "speed boots"
+msgstr "boty rychlosti"
+
+#: data/items.m4:1523
+msgid "boots of ice"
+msgstr "boty ledu"
+
+#: data/items.m4:1535
+msgid "plain ring"
+msgstr "plochy prsten"
+
+#: data/items.m4:1544
+msgid "ring of strength"
+msgstr "prsten sily"
+
+#: data/items.m4:1554
+msgid "ring of dexterity"
+msgstr "prsten obratnosti"
+
+#: data/items.m4:1564
+msgid "ring of toughness"
+msgstr "prsten odolnosti"
+
+#: data/items.m4:1574
+msgid "ring of willpower"
+msgstr "prsten sily vule"
+
+#: data/items.m4:1584
+msgid "ring of mana"
+msgstr "prsten magie"
+
+#: data/items.m4:1594
+msgid "ring of protection"
+msgstr "pristen ochrany"
+
+#: data/items.m4:1604
+msgid "ring of illumination"
+msgstr "prsten svetla"
+
+#: data/items.m4:1614
+msgid "ring of damage"
+msgstr "prsten zraneni"
+
+#: data/items.m4:1625
+msgid "ring of detect invisibility"
+msgstr "prsten detekce"
+
+#: data/items.m4:1635
+msgid "ring of poison resistance"
+msgstr "prsten odolnosti vuci jedu"
+
+#: data/items.m4:1645
+msgid "ring of hunger"
+msgstr "prsten hladu"
+
+#: data/items.m4:1655
+msgid "ring of teleportation"
+msgstr "prsten teleportace"
+
+#: data/items.m4:1664
+msgid "ring of time dilation"
+msgstr "prsten casu"
+
+#: data/items.m4:1677
+msgid "amulet of slow digestion"
+msgstr "amulet pomaleho traveni"
+
+#: data/items.m4:1687
+msgid "amulet of brilliance"
+msgstr "amulet briliance"
+
+#: data/items.m4:1697
+msgid "amulet of speed"
+msgstr "amulet rychlosti"
+
+#: data/items.m4:1708
+msgid "amulet of regeneration"
+msgstr "amulet regenerace"
+
+#: data/items.m4:1719
+msgid "amulet of telekinesis"
+msgstr "amulet telekineze"
+
+#: data/items.m4:1743
+#, c-format
+msgid "They weld themselves to your %s!"
+msgstr "Samy se dostaly do tvych %s!"
+
+#: data/items.m4:1745
+#, c-format
+msgid "It welds itself to your %s!"
+msgstr "Sam se dostal do tvych %s!"
+
+#: data/items.m4:1820
+msgid "It's too small."
+msgstr "Je to prilis male."
+
+#: data/items.m4:1823
+msgid "The shopkeeper says \"sorry, no returns\"."
+msgstr "\"Sorry, nevracim\", rika obchodnik."
+
+#: data/items.m4:1833
+msgid "These boots are quite slippery."
+msgstr "Tyhle boty jsou kluzke."
+
+#: data/items.m4:1840
+msgid "You feel well protected."
+msgstr "Citis se v bezpeci."
+
+#: data/items.m4:1847
+msgid "You are surrounded by a shimmering haze."
+msgstr "Jsi obklopen trpytivym oparem."
+
+#: data/items.m4:1854 data/items.m4:1901
+msgid "It starts to glow brightly."
+msgstr "Zacal jasne zhnout."
+
+#: data/items.m4:1861 data/items.m4:2730 data/spells.m4:518
+msgid "Your eyes tingle."
+msgstr "Tvoje oci pali."
+
+#: data/items.m4:1868
+msgid "Your feel your metabolism speed up."
+msgstr "Tvuj metabolismus se zrychluje."
+
+#: data/items.m4:1878
+msgid "The ring's magic fades away."
+msgstr "Magie prstenu zmizela pryc."
+
+#: data/items.m4:1887
+msgid "Everything around you moves in slow motion."
+msgstr "Vsechno okolo tebe se pohybuje zpomalene."
+
+#: data/items.m4:1894
+msgid "You feel your metabolism slow down."
+msgstr "Tvuj metabolismus se zpomaluje."
+
+#: data/items.m4:1908
+msgid "Time slows down around you."
+msgstr "Cas okolo tebe se zpomalil."
+
+#: data/items.m4:1915
+msgid "You feel your metabolism speed up."
+msgstr "Tvuj metabolismus se zrychlil."
+
+#: data/items.m4:1922
+msgid "You feel can move projectiles with your mind."
+msgstr "Muzes pohybovat strelami silou mysli."
+
+#: data/items.m4:1938
+msgid "The power of your cloak is almost gone."
+msgstr "Sila tveho plaste vyprchava..."
+
+#: data/items.m4:1940
+msgid "Your feel vulnerable."
+msgstr "Citis se zranitelny."
+
+#: data/items.m4:1945
+msgid "The power of your cloak is fading."
+msgstr "Sila tveho plaste se ztraci."
+
+#: data/items.m4:1962
+msgid "The power of your ring is almost gone."
+msgstr "Sila tveho prstenu je temer pryc."
+
+#: data/items.m4:1964
+msgid "Your surroundings seem to speed up."
+msgstr "Tve okolo se zrychlilo."
+
+#: data/items.m4:1969
+msgid "The power of your ring is fading."
+msgstr "Sila tveho prstenu mizi."
+
+#: data/items.m4:1987
+msgid "Your torch is running low."
+msgstr "Tvoje pochoden dohoriva."
+
+#: data/items.m4:1991
+msgid "Your torch seems about to go out."
+msgstr "Pochoden je pred zhasnutim."
+
+#: data/items.m4:1995
+msgid "Your torch burns out."
+msgstr "Pochoden zhasnula."
+
+#: data/items.m4:2087 data/items.m4:2348 data/items.m4:2666 data/spells.m4:643
+#: src/magic.c:248 src/magic.c:291 dll/dll.c:133
+msgid "Nothing happens."
+msgstr "Nic se nestalo."
+
+#: data/items.m4:2112
+msgid "Whoops..."
+msgstr "Upss..."
+
+#: data/items.m4:2116 data/items.m4:2570 data/spells.m4:480 data/spells.m4:510
+#: src/player.c:854 src/throw.c:109
+msgid "In what direction?"
+msgstr "V jakem smeru?"
+
+#: data/items.m4:2124
+msgid "You are too dazed to read."
+msgstr "Jsi prilis omameny na cteni."
+
+#: data/items.m4:2136
+msgid "The scroll disappears."
+msgstr "Svitek zmizel."
+
+#: data/items.m4:2156
+msgid "Fill it from the fountain?"
+msgstr "Naplnit z fontany?"
+
+#: data/items.m4:2173 data/tiles.m4:245
+msgid "The water suddenly comes to life!"
+msgstr "Voda nahle ozila!"
+
+#: data/items.m4:2178
+msgid "You fill a bottle with water from the fountain."
+msgstr "Naplnil jsi lahev vodou z fontany."
+
+#: data/items.m4:2185
+msgid "It's empty, and you can't refill it here."
+msgstr "Je prazdna a zde ji nemuzes naplnit."
+
+#: data/items.m4:2195 data/tiles.m4:251 data/tiles.m4:265
+msgid "The water is tasteless."
+msgstr "Voda je bez chuti."
+
+#: data/items.m4:2204 data/tiles.m4:203
+msgid "The water recharges you."
+msgstr "Voda te osvezuje."
+
+#: data/items.m4:2219 data/tiles.m4:215 data/tiles.m4:263
+msgid "The water is dirty."
+msgstr "Voda je spinava."
+
+#: data/items.m4:2221 data/tiles.m4:217
+msgid "Yurgh! The water is vile!"
+msgstr "Blee! Voda je odporna!"
+
+#: data/items.m4:2222 data/tiles.m4:218
+msgid "Drank poison."
+msgstr "Vypil jsi jed."
+
+#: data/items.m4:2232 data/items.m4:2402
+msgid "Oh wow! Everything looks cosmic now!"
+msgstr "Heh, wau! Vsechno vypada silene!"
+
+#: data/items.m4:2249 data/tiles.m4:208 data/tiles.m4:233 data/tiles.m4:259
+msgid "The water is cold."
+msgstr "Voda je studena."
+
+#: data/items.m4:2258
+msgid "You feel better."
+msgstr "Citis se lepe."
+
+#: data/items.m4:2268 data/items.m4:2278
+msgid "You feel much better."
+msgstr "Citis se o dost lepe."
+
+#: data/items.m4:2370
+msgid "You sense the presence of objects."
+msgstr "Citis pritomnost predmetu."
+
+#: data/items.m4:2379
+msgid "This stuff tastes like poison."
+msgstr "Chutna to jako jed."
+
+#: data/items.m4:2381
+msgid "It doesn't seem to affect you."
+msgstr "Zda se, ze te to nijak neovlivnuje."
+
+#: data/items.m4:2392
+msgid "You are confused!"
+msgstr "Jsi zmaten!"
+
+#: data/items.m4:2413 data/tiles.m4:238
+msgid "You lose all feeling and the pain disappears."
+msgstr "Ztracis vsechen cit a bolest mizi."
+
+#: data/items.m4:2415 data/tiles.m4:240
+msgid "You lose all feeling in your body."
+msgstr "Ztracis vsechen cit v tele."
+
+#: data/items.m4:2426
+msgid "This scroll is completely blank."
+msgstr "Svitek je prazdny."
+
+#: data/items.m4:2449
+msgid "This is a scroll of identify."
+msgstr "Tohle je svitek identifikace."
+
+#: data/items.m4:2472
+msgid "A map forms in your mind."
+msgstr "Mapa se zjevila v tve mysli."
+
+#: data/items.m4:2483
+msgid "Monsters appear out of nowhere!"
+msgstr "Nestvury se objevily odnikud!"
+
+#: data/items.m4:2497
+msgid "You feel like someone is helping you."
+msgstr "Citis, ze ti nekdo pomaha."
+
+#: data/items.m4:2545
+msgid "You aren't hungry."
+msgstr "Nejsi hladovy."
+
+#: data/items.m4:2550
+msgid "Tastes good."
+msgstr "Chutna dobre."
+
+#: data/items.m4:2553
+msgid "Blech! Rotten food!"
+msgstr "Bleeh! Zkazene jidlo!"
+
+#: data/items.m4:2582
+msgid "You tear down the door."
+msgstr "Vyrazil jsi dvere."
+
+#: data/items.m4:2593
+msgid "You start digging."
+msgstr "Zacal jsi kopat."
+
+#: data/items.m4:2598 data/spells.m4:354
+msgid "You are interrupted."
+msgstr "Jsi prerusen."
+
+#: data/items.m4:2602
+msgid "You knock down the wall."
+msgstr "Prorazil jsi zed."
+
+#: data/items.m4:2609 data/items.m4:2614
+msgid "The wall is too hard to dig in."
+msgstr "Zed je prilis tvrda na kopani."
+
+#: data/items.m4:2618
+msgid "You swing at empty air."
+msgstr "Promachl jsi prazdny vzduch."
+
+#: data/items.m4:2708
+msgid "There is a sudden flash of light!"
+msgstr "Zablesklo se!"
+
+#: data/items.m4:2766
+#, c-format
+msgid "The %s disappears!"
+msgstr "%s zmizel!"
+
+#: data/items.m4:2788
+#, c-format
+msgid "The bolt hits %s!"
+msgstr "Sipka zasahla %s!"
+
+#: data/items.m4:2788
+msgid "Killed by a bolt"
+msgstr "Zabit sipkou."
+
+#: data/items.m4:2819
+#, c-format
+msgid "The lightning bolt hits %s!"
+msgstr "Blesk zasahl %s!"
+
+#: data/items.m4:2820
+msgid "Killed by a bolt of a lightning"
+msgstr "Zabit bleskem."
+
+#: data/items.m4:2845
+msgid "The lightning arcs!"
+msgstr "Oblouk blesku!"
+
+#: data/items.m4:2897
+#, c-format
+msgid "This fireball hits %s!"
+msgstr "Ohniva koule zasahla %s!"
+
+#: data/items.m4:2897 data/monsters.m4:1390
+msgid "Killed by a fireball"
+msgstr "Zabit ohnivou kouli"
+
+#: data/items.m4:2921
+msgid "The door is razed!"
+msgstr "Dvere jsou vyrazene."
+
+#: data/items.m4:2950
+msgid "You spot a hidden door!"
+msgstr "Zahledl jsi skryte dvere!"
+
+#: data/items.m4:2957
+msgid "You notice a trap!"
+msgstr "Vsiml jsi si pasti!"
+
+#: data/maps.m4:16
+msgid "the surface"
+msgstr "povrch"
+
+#: data/maps.m4:19 data/maps.m4:170
+msgid "level 1"
+msgstr "podzemi 1"
+
+#: data/maps.m4:23 data/maps.m4:176
+msgid "level 2"
+msgstr "podzemi 2"
+
+#: data/maps.m4:27 data/maps.m4:180
+msgid "level 3"
+msgstr "podzemi 3"
+
+#: data/maps.m4:31 data/maps.m4:184
+msgid "level 4"
+msgstr "podzemi 4"
+
+#: data/maps.m4:35 data/maps.m4:188
+msgid "level 5"
+msgstr "podzemi 5"
+
+#: data/maps.m4:44
+msgid "town"
+msgstr "vesnice"
+
+#: data/maps.m4:59
+msgid "wilderness"
+msgstr "divocina"
+
+#: data/maps.m4:72
+msgid "forest"
+msgstr "les"
+
+#: data/maps.m4:79
+msgid "city"
+msgstr "mesto"
+
+#: data/maps.m4:124 data/maps.m4:130 data/maps.m4:136 data/maps.m4:142
+#: data/maps.m4:148
+msgid "a cave"
+msgstr "jeskyne"
+
+#: data/maps.m4:154
+msgid "dwarfish town"
+msgstr "trpaslici mesto"
+
+#: data/maps.m4:192
+msgid "level 6"
+msgstr "podzemi 6"
+
+#: data/maps.m4:196
+msgid "level 7"
+msgstr "podzemi 7"
+
+#: data/maps.m4:200
+msgid "level 8"
+msgstr "podzemi 8"
+
+#: data/maps.m4:204
+msgid "level 9"
+msgstr "podzemi 9"
+
+#: data/maps.m4:208
+msgid "level 10"
+msgstr "podzemi 10"
+
+#: data/maps.m4:212
+msgid "level 11"
+msgstr "podzemi 11"
+
+#: data/maps.m4:216
+msgid "level 12"
+msgstr "podzemi 12"
+
+#: data/maps.m4:220
+msgid "level 13"
+msgstr "podzemi 13"
+
+#: data/maps.m4:224
+msgid "level 14"
+msgstr "podzemi 14"
+
+#: data/maps.m4:228
+msgid "level 15"
+msgstr "podzemi 15"
+
+#: data/maps.m4:235
+msgid "tutorial"
+msgstr "vyuka"
+
+#: data/maps.m4:1091
+msgid ""
+"After the Creation, the cruel god Moloch rebelled against the authority of "
+"Marduk the Creator. Moloch stole from Marduk the most powerful of all the "
+"artifacts of the gods, the Amulet of Yendor, and he hid it in the dark "
+"cavities of Gehennom, the Under World, from whence an agent of Loki took it "
+"and gained standing among the gods. Over time, Loki became cruel and the "
+"other gods covetted his power. Loki hid the Amulet deep in the earth to keep "
+"it from them.\n"
+"You seek possession of the Amulet, to wield, give or destroy it."
+msgstr ""
+"Po Stvoreni, kruty buh Moloch se vzbouril autorite Marduka, Tvurce. "
+"Moloch ukradl Mardukovi nejmocnejsi artefakt bohu, \"Amulet of Yendor\" a schoval ho v temnych jeskynich Gehennomu, v Podsveti, odkud ho sebral agent Lokiho a ziskal misto mezi bohy. "
+"Behem casu se stal Loki krutym a ostatni bohove bazili po jeho moci. Loki schoval Amulet hluboko v zemi, aby ho uchranil pred nimi. "
+"Chces se zmocnit amuletu, aby jsi ho pouzil, obetovat nebo znicil."
+
+#: data/maps.m4:1108
+msgid "You arrive by boat at a port town."
+msgstr "Dorazil jsi na lodi do pristavu u mesta."
+
+#: data/maps.m4:1140
+msgid "Congratulations! You have escaped with the Amulet."
+msgstr "Gratuluji! Unikl jsi s Amuletem."
+
+#: data/maps.m4:1142
+msgid "Escaped with the Amulet."
+msgstr "Unikl s Amuletem."
+
+#: data/maps.m4:1232
+msgid "You enter a massive stone cavern."
+msgstr "Vstoupil jsi do ohromne jeskyne."
+
+#: data/maps.m4:1239
+msgid "The remains of this underground city are abandoned and overrun."
+msgstr "Zbytky tohoto podzemniho mesta jsou opustene a znicene."
+
+#: data/monsters.m4:188
+msgid "Shopkeeper"
+msgstr "Obchodnik"
+
+#: data/monsters.m4:196
+msgid "Salesman"
+msgstr "Prodavac"
+
+#: data/monsters.m4:204
+msgid "Blacksmith"
+msgstr "Kovar"
+
+#: data/monsters.m4:212
+msgid "Oracle"
+msgstr "Vestkyne"
+
+#: data/monsters.m4:220
+msgid "Village elder"
+msgstr "Staresina vesnice"
+
+#: data/monsters.m4:228
+msgid "Dwarf named Thunrarr"
+msgstr "Trpaslik Thunrarr"
+
+#: data/monsters.m4:236
+msgid "Bridge troll"
+msgstr "Troll u mostu"
+
+#: data/monsters.m4:245 data/monsters.m4:253 data/spells.m4:729
+msgid "Skeleton"
+msgstr "Kostlivec"
+
+#: data/monsters.m4:261 data/monsters.m4:444 data/spells.m4:735
+msgid "Zombie"
+msgstr "Zombie"
+
+#: data/monsters.m4:271 data/spells.m4:741
+msgid "Mummy"
+msgstr "Mumie"
+
+#: data/monsters.m4:279 data/monsters.m4:575 data/spells.m4:747
+msgid "Wraith"
+msgstr "Duch"
+
+#: data/monsters.m4:287
+msgid "Angel"
+msgstr "Andel"
+
+#: data/monsters.m4:296 data/monsters.m4:304
+msgid "Horse"
+msgstr "Kun"
+
+#: data/monsters.m4:312
+msgid "Water elemental"
+msgstr "Vodni elemental"
+
+#: data/monsters.m4:322
+msgid "Fisherman"
+msgstr "Rybar"
+
+#: data/monsters.m4:330
+msgid "Commoner"
+msgstr "Mestan"
+
+#: data/monsters.m4:338
+msgid "Dwarf"
+msgstr "Trpaslik"
+
+#: data/monsters.m4:348
+msgid "Bat"
+msgstr "Netopyr"
+
+#: data/monsters.m4:356
+msgid "Emu"
+msgstr "Emu"
+
+#: data/monsters.m4:364
+msgid "Giant rat"
+msgstr "Obri krysa"
+
+#: data/monsters.m4:372
+msgid "Snake"
+msgstr "Had"
+
+#: data/monsters.m4:380
+msgid "Jackal"
+msgstr "Sakal"
+
+#: data/monsters.m4:388
+msgid "Kobold"
+msgstr "Kobold"
+
+#: data/monsters.m4:396
+msgid "Giant ant"
+msgstr "Obri mravenec"
+
+#: data/monsters.m4:404
+msgid "Goblin"
+msgstr "Goblin"
+
+#: data/monsters.m4:412
+msgid "Rattlesnake"
+msgstr "Chrestys"
+
+#: data/monsters.m4:420
+msgid "Mimic"
+msgstr "Mimik"
+
+#: data/monsters.m4:428
+msgid "Orc"
+msgstr "Skret"
+
+#: data/monsters.m4:436
+msgid "Giant spider"
+msgstr "Obri pavouk"
+
+#: data/monsters.m4:453
+msgid "Dark wizard"
+msgstr "Temny carodej"
+
+#: data/monsters.m4:463
+msgid "Leprechaun"
+msgstr "Skritek"
+
+#: data/monsters.m4:471
+msgid "Nymph"
+msgstr "Nymfa"
+
+#: data/monsters.m4:479
+msgid "Aquator"
+msgstr "Rzivec"
+
+#: data/monsters.m4:487
+msgid "Vortex"
+msgstr "Vortex"
+
+#: data/monsters.m4:496
+msgid "Grue"
+msgstr "Sliz"
+
+#: data/monsters.m4:506
+msgid "Ice Monster"
+msgstr "Ledova obluda"
+
+#: data/monsters.m4:515
+msgid "Killer bee"
+msgstr "Zabijacka vcela"
+
+#: data/monsters.m4:523
+msgid "Hobgoblin"
+msgstr "Hobgoblin"
+
+#: data/monsters.m4:531
+msgid "Fire elemental"
+msgstr "Elemental ohne"
+
+#: data/monsters.m4:539
+msgid "Fire mage"
+msgstr "Ohnivy mag"
+
+#: data/monsters.m4:549
+msgid "Wind mage"
+msgstr "Vetrny mag"
+
+#: data/monsters.m4:559
+msgid "Phantom"
+msgstr "Fantom"
+
+#: data/monsters.m4:567
+msgid "Troll"
+msgstr "Troll"
+
+#: data/monsters.m4:583
+msgid "Giant slug"
+msgstr "Obri slimak"
+
+#: data/monsters.m4:592
+msgid "Centaur"
+msgstr "Kentaur"
+
+#: data/monsters.m4:600
+msgid "Yeti"
+msgstr "Jeti"
+
+#: data/monsters.m4:608
+msgid "Griffin"
+msgstr "Grifin"
+
+#: data/monsters.m4:616
+msgid "Jabberwock"
+msgstr "Jabberwock"
+
+#: data/monsters.m4:624
+msgid "Vampire"
+msgstr "Upir"
+
+#: data/monsters.m4:632
+msgid "Dragon"
+msgstr "Drak"
+
+#: data/monsters.m4:678
+msgid "The Oracle speaks..."
+msgstr "Vestkyne promluvila..."
+
+#: data/monsters.m4:681
+msgid ""
+"That which you seek, the Amulet of Yendor, is long gone from this place, "
+"though here it once was. Though many seek it, the Amulet has as yet evaded "
+"all. But though it is hidden, it is not lost. Seek it between the mountains "
+"in a land to the south, and you may find it, but beware the creatures that "
+"guard it, and know that the Amulet is believed to possess a will of its own."
+msgstr ""
+"To co hledas, \"Amulet of Yendor\" jiz dlouho je pryc, ackoli tak tomu nebylo. "
+"Ackoliv ho mnoho hleda, Amulet se jim vsem vyhnul. I kdyz je schovany, neni ztracen. "
+"Hledej ho mezi horami v zemi na jihu, a mozna ho najdes - ale dej si pozor na nestvury, ktereho strazi. "
+"A vez, ze Amulet ma svoji vlastni vuli."
+
+#: data/monsters.m4:702
+msgid "The salesman says \"fine horse, only 700 gold!\" Buy one?"
+msgstr "Handlir rika \"perfektni valecny kun, jen za 700 zlataku\", chcete jednoho?"
+
+#: data/monsters.m4:709
+msgid "You're so hungry, you could eat a horse! Do so?"
+msgstr "Jsi tak hladovy, zeby jsi snedl kone! Udelas to?"
+
+#: data/monsters.m4:714
+msgid "You feel sick in more ways than one."
+msgstr "Citis se nemocny na nekolik zpusobu."
+
+#: data/monsters.m4:717
+msgid "The salesman is disgusted."
+msgstr "Obchodnik je znechucen."
+
+#: data/monsters.m4:723
+msgid "You can't afford it."
+msgstr "Nemuzes si to dovolit."
+
+#: data/monsters.m4:741
+msgid "The smith asks \"need anything fixed?\""
+msgstr "Kovar se pta \"potrebujes neco opravit?\""
+
+#: data/monsters.m4:746
+msgid "\"You don't have anything that needs fixing.\""
+msgstr "\"Nemas nic coby potrebovalo opravit.\""
+
+#: data/monsters.m4:747 data/monsters.m4:748
+msgid "\"Come back later.\""
+msgstr "\"Vrat se pozdeji.\""
+
+#: data/monsters.m4:763
+msgid ""
+"The village elder says \"in the forest to the east, a troll has taken over "
+"the bridge. If you would slay it, I will reward you.\""
+msgstr "Staresina ti nabizi \"V lesich na vychod hlida most troll. Kdyz ho zabijes, odmenim se ti.\""
+
+#: data/monsters.m4:768
+msgid "\"Thank you. Here is 2000 gold, as promised.\""
+msgstr "\"Dekuji, zde je 2000 zlataku jak jsem slibil.\""
+
+#: data/monsters.m4:780
+msgid ""
+"Thunrarr, the dwarf before you looks old, worn and unhappy. \"Used tobe, "
+"we'd get illuminyte from the mines nearby. But no one dares go in "
+"thereanymore. If you could bring back six pieces, I'm sure I could find "
+"somethingto make it worth your while."
+msgstr ""
+"Thunrarr, trpaslik pred tebou vypada stare, obnosene a nestastne. \"Byvavalo, kdy jsme z nedalekych dolu ziskavali \"illuminyte\". Ale nyni se tam nikdo neodvazi. "
+"Pokud mi prineses sest kusu, jsem si jist, ze najdu neco, co bude hodno toho casu.\""
+
+#: data/monsters.m4:790
+msgid "I'd recognize that glow anywhere! Will you give me some illuminyte?"
+msgstr "Poznam jeho zari kdekoli! Das mi \"illuminyte\"?"
+
+#: data/monsters.m4:794
+msgid ""
+"Thank you. Once, I was a fierce warrior, but now I have no use for this "
+"armor. Please, take it."
+msgstr "Dekuji. Kdysijsem byval obavany valecnik, ale nyni jiz nemam uzitku pro tuhle zbroj. Prosim, vezmi si ji."
+
+#: data/monsters.m4:798
+msgid "Well, please come back when you have some to spare."
+msgstr "Dobre, vrat se pozdeji, az budes mit nejakou nahradu."
+
+#: data/monsters.m4:801
+msgid "Thunrarr asks \"Have you some illuminyte?\""
+msgstr "Thunrarr se pta \"Mas nejake \"illuminyte\"?\""
+
+#: data/monsters.m4:811
+msgid "The troll demands a toll of twenty gold. Pay?"
+msgstr "Troll vyzaduje 20 zlataku za pruchod. Zaplatis?"
+
+#: data/monsters.m4:815
+msgid "The troll mumbles something."
+msgstr "Troll si neco mumla."
+
+#: data/monsters.m4:819
+msgid "You don't have enough gold. The troll gets angry!"
+msgstr "Nemas dostatek zlata. Troll se rozcilil!"
+
+#: data/monsters.m4:828
+msgid "The troll attacks!"
+msgstr "Troll utoci!"
+
+#: data/monsters.m4:858 src/monst.c:582
+#, c-format
+msgid "The %s gets angry!"
+msgstr "%s se rozcilil!"
+
+#: data/monsters.m4:1073
+msgid "The poison doesn't seem to affect you."
+msgstr "Zda se, ze na tebe nema jed vliv."
+
+#: data/monsters.m4:1098
+msgid " attacks from behind and"
+msgstr "zautocil zezadu a"
+
+#: data/monsters.m4:1099
+#, c-format
+msgid "The %s%s %s you!"
+msgstr "%s%s %s te!"
+
+#: data/monsters.m4:1103
+#, c-format
+msgid "The %s %s the %s!"
+msgstr "%s %s %s!"
+
+#: data/monsters.m4:1106
+#, c-format
+msgid "The %s %s something."
+msgstr "%s %s cosi."
+
+#: data/monsters.m4:1108
+#, c-format
+msgid "Something %s the %s"
+msgstr "Cosi %s %s"
+
+#: data/monsters.m4:1110 src/pet.c:85
+msgid "You hear the sound of combat."
+msgstr "Slysis hluk boje."
+
+#: data/monsters.m4:1121 data/monsters.m4:1183
+msgid "hits"
+msgstr "zasahl"
+
+#: data/monsters.m4:1127
+msgid "claws"
+msgstr "drasal"
+
+#: data/monsters.m4:1133
+msgid "kicks"
+msgstr "kopnul"
+
+#: data/monsters.m4:1139 data/monsters.m4:1154 data/monsters.m4:1166
+#: data/monsters.m4:1272
+msgid "bites"
+msgstr "kousnul"
+
+#: data/monsters.m4:1144
+msgid "Its bite was diseased."
+msgstr "Kousnuti bylo jedovate."
+
+#: data/monsters.m4:1160
+msgid "burns"
+msgstr "hori"
+
+#: data/monsters.m4:1187
+#, c-format
+msgid "%li coins were stolen! The %s disappears!"
+msgstr "%li zlataku bylo ukradeno! %s zmizel!"
+
+#: data/monsters.m4:1216
+#, c-format
+msgid "The %s steals your %s. The %s disappears!"
+msgstr "%s ukradla tvuj %s. %s zmizela!"
+
+#: data/monsters.m4:1239
+#, c-format
+msgid "The %s hits!"
+msgstr "%s zasahl!"
+
+#: data/monsters.m4:1249
+#, c-format
+msgid "The %s freezes you!"
+msgstr "%s te zmrazilo!"
+
+#: data/monsters.m4:1252
+#, c-format
+msgid "The %s is frozen!"
+msgstr "%s je zmrazen!"
+
+#: data/monsters.m4:1261
+msgid "stings"
+msgstr "bodnul"
+
+#: data/monsters.m4:1276
+msgid "You feel your life force draining away."
+msgstr "Citis jak te opousti zivotni sila."
+
+#: data/monsters.m4:1293
+#, c-format
+msgid "The %s summons a skeleton!"
+msgstr "%s privolal Kostlivce!"
+
+#: data/monsters.m4:1306
+#, c-format
+msgid "The %s summons a fire elemental!"
+msgstr "%s privolal ohniveho elementala!"
+
+#: data/monsters.m4:1322
+#, c-format
+msgid "The %s casts magic missile!"
+msgstr "%s sesila magickou strelu!"
+
+#: data/monsters.m4:1323
+#, c-format
+msgid "The missile hit %s!"
+msgstr "Strela zasahla %s!"
+
+#: data/monsters.m4:1323
+msgid "Killed by a magic missile"
+msgstr "Zabit magickou strelou"
+
+#: data/monsters.m4:1365
+#, c-format
+msgid "The %s casts fireball!"
+msgstr "%s sesila ohnivou kouli!"
+
+#: data/monsters.m4:1390
+#, c-format
+msgid "The flames burn %s!"
+msgstr "Plameny spaluji %s!"
+
+#: data/monsters.m4:1405
+#, c-format
+msgid "The %s breathes fire!"
+msgstr "%s chrli ohen!"
+
+#: data/monsters.m4:1406
+#, c-format
+msgid "The flames hit %s!"
+msgstr "Plameny zasahly %s!"
+
+#: data/monsters.m4:1406
+msgid "Killed by a dragon's flame"
+msgstr "Zabit dracim ohnem"
+
+#: data/monsters.m4:1474
+#, c-format
+msgid "The %s spits acid!"
+msgstr "%s chrli kyselinu!"
+
+#: data/monsters.m4:1475
+#, c-format
+msgid "The acid hits %s!"
+msgstr "Kyselina zasahla %s!"
+
+#: data/monsters.m4:1475
+msgid "Killed by acid"
+msgstr "Zabit kyselinou"
+
+#: data/monsters.m4:1495
+msgid "Oh, no! You walked into the slavering fangs of a lurking grue!"
+msgstr "Ale ne! Vkrocil jsi primo do ochromujich tesaku skryvajiciho se Slizu!"
+
+#: data/monsters.m4:1551
+msgid "You are engulfed in darkness."
+msgstr "Jsi pohlcen v temnote."
+
+#: data/monsters.m4:1553
+msgid "You are engulfed in impenetrable darkness."
+msgstr "Jsi pohlcen v neproniknutelne temnote."
+
+#: data/monsters.m4:1609
+#, c-format
+msgid "A strong wind throws you into the %s!"
+msgstr "Silny vitr te odhodil do %s!"
+
+#: data/monsters.m4:1615
+msgid "You are thrown back by a strong wind."
+msgstr "Jsi odhozen zpatky silnym vetrem."
+
+#: data/monsters.m4:1627
+msgid "You are thrown into the door by a strong wind."
+msgstr "Jsi mrsten na dvere silnym vetrem."
+
+#: data/monsters.m4:1628
+msgid "Crashed into a door."
+msgstr "Vrazil do dveri."
+
+#: data/monsters.m4:1630
+msgid "You are thrown into the fence by a strong wind."
+msgstr "Jsi mrsten na kul silnym vetrem."
+
+#: data/monsters.m4:1631
+msgid "Impaled on a fence."
+msgstr "Napichnut na kul"
+
+#: data/monsters.m4:1633
+msgid "You are thrown into the tree by a strong wind."
+msgstr "Jsi mrsten silnym vetrem na strom."
+
+#: data/monsters.m4:1634
+msgid "Fell onto a tree."
+msgstr "Spadl na strom."
+
+#: data/monsters.m4:1636
+msgid "You are thrown into the wall by a strong wind."
+msgstr "Jsi mrsten na zed silnym vetrem."
+
+#: data/monsters.m4:1637
+msgid "Hit a wall."
+msgstr "Zasahl zed."
+
+#: data/monsters.m4:1676
+msgid "You struggle to retain your balance in the wind."
+msgstr "Bojujes o ziskani rovnovahy ve vetru."
+
+#: data/monsters.m4:1692
+msgid "You are hit by flying debris!"
+msgstr "Jsi zasazen leticimi troskami!"
+
+#: data/monsters.m4:1696
+#, c-format
+msgid "The %s is hit by flying debris!"
+msgstr "%s je zasazen leticimi troskami!"
+
+#: data/monsters.m4:1710
+#, c-format
+msgid "The %s summons a vortex!"
+msgstr "%s privolal vortex!"
+
+#: data/monsters.m4:1746
+msgid "You are sent flying by a powerful blast of wind!"
+msgstr "Vznesl jsi se pod silnym poryvem vetru."
+
+#: data/monsters.m4:1748
+#, c-format
+msgid "The %s is sent flying by a powerful blast of wind!"
+msgstr "%s je nadnesen silnym poryvem vetru!"
+
+#: data/monsters.m4:1760
+#, c-format
+msgid "You crash into the %s!"
+msgstr "Narazil jsi do %s!"
+
+#: data/monsters.m4:1775
+msgid "You land in a tree! You climb down."
+msgstr "Pristal jsi na strome! Slezl jsi dolu."
+
+#: data/monsters.m4:1777
+msgid "You hit a tree! You fall out."
+msgstr "Zasahl jsi strom! Spadl jsi dolu."
+
+#: data/monsters.m4:1778
+msgid "Fell out of a tree"
+msgstr "Spadl ze stromu."
+
+#: data/monsters.m4:1781
+msgid "You hit a wall!"
+msgstr "Trefil jsi se do zdi!"
+
+#: data/monsters.m4:1782
+msgid "Hit a wall"
+msgstr "Zasahl zed"
+
+#: data/monsters.m4:1792
+msgid "You land in a spider web!"
+msgstr "Pristal jsi v pavouci siti!"
+
+#: data/monsters.m4:1801
+msgid "You land badly!"
+msgstr "Pristal jsi velmi spatne!"
+
+#: data/monsters.m4:1802
+msgid "Broke his neck"
+msgstr "Zlomil si krk"
+
+#: data/playerclass.m4:36
+msgid "Fighter"
+msgstr "Valecnik"
+
+#: data/playerclass.m4:37
+msgid "Wizard"
+msgstr "Carodej"
+
+#: data/playerclass.m4:38
+msgid "Archer"
+msgstr "Lucistnik"
+
+#: data/playerclass.m4:39
+msgid "Priest"
+msgstr "Knez"
+
+#: data/playerclass.m4:40
+msgid "Necromancer"
+msgstr "Nekromant"
+
+#: data/playerclass.m4:41
+msgid "Student"
+msgstr "Student"
+
+#: data/shops.m4:22
+msgid "Beta-Espilon Jewelers"
+msgstr "Klenotnictvi.Beta-Espilon"
+
+#: data/shops.m4:26
+msgid "Sahara dot Comma Books"
+msgstr "Knihkupectvi Sahara tecka Carka"
+
+#: data/shops.m4:27
+msgid "Ischer's Weapon Shop"
+msgstr "Ischerovuv obchod se zbranemi"
+
+#: data/shops.m4:28
+msgid "ArmorAll Armory"
+msgstr "Vsezbrojni zbrojnice"
+
+#: data/shops.m4:29
+msgid "Paul's Power Potions"
+msgstr "Lektvary Pavla Powera"
+
+#: data/shops.m4:30
+msgid "Mel's Magics"
+msgstr "Melina Kouzla a cary"
+
+#: data/shops.m4:31
+msgid "Frobozz General Store"
+msgstr "Frobozzuv obchod"
+
+#: data/shops.m4:32
+msgid "Minetown Mining Supplies"
+msgstr "Tezebni zasobarna"
+
+#: data/spells.m4:23
+msgid "Magic Bolt"
+msgstr "Magicka sipka"
+
+#: data/spells.m4:24 src/items.c:755
+msgid "Light"
+msgstr "Svetlo"
+
+#: data/spells.m4:25
+msgid "Detect invisible"
+msgstr "Najdi neviditelne"
+
+#: data/spells.m4:26
+msgid "Identify"
+msgstr "Identifikace"
+
+#: data/spells.m4:29 data/spells.m4:37
+msgid "Scare monster"
+msgstr "Zastrasit nestvuru"
+
+#: data/spells.m4:30
+msgid "Confusion"
+msgstr "Zmateni"
+
+#: data/spells.m4:31
+msgid "Lightning bolt"
+msgstr "Blesk"
+
+#: data/spells.m4:34
+msgid "Adrenaline"
+msgstr "Adrenalin"
+
+#: data/spells.m4:35
+msgid "Gain strength"
+msgstr "Obri sila"
+
+#: data/spells.m4:36 data/spells.m4:46
+msgid "Heal"
+msgstr "Leceni"
+
+#: data/spells.m4:39
+msgid "Blink"
+msgstr "Zablesk"
+
+#: data/spells.m4:40
+msgid "Teleport"
+msgstr "Teleport"
+
+#: data/spells.m4:41
+msgid "Remove curse"
+msgstr "Odstraneni kletby"
+
+#: data/spells.m4:44
+msgid "Shield"
+msgstr "Stit"
+
+#: data/spells.m4:45
+msgid "Purify"
+msgstr "Ocisteni"
+
+#: data/spells.m4:47
+msgid "Divine Aid"
+msgstr "Bozi pomoc"
+
+#: data/spells.m4:50
+msgid "Summon skeleton"
+msgstr "Povolat kostlivce"
+
+#: data/spells.m4:51
+msgid "Summon zombie"
+msgstr "Povolat zombii"
+
+#: data/spells.m4:52
+msgid "Summon mummy"
+msgstr "Povolat mumii"
+
+#: data/spells.m4:53
+msgid "Summon wraith"
+msgstr "Povolat ducha"
+
+#: data/spells.m4:55
+msgid "Mend bone"
+msgstr "Spravit kosti"
+
+#: data/spells.m4:56
+msgid "Repair zombie"
+msgstr "Opravit zombii"
+
+#: data/spells.m4:57
+msgid "Repair mummy"
+msgstr "Opravit mumii"
+
+#: data/spells.m4:58
+msgid "Shadow healing"
+msgstr "Stinove leceni"
+
+#: data/spells.m4:61
+msgid "red book"
+msgstr "cervena kniha"
+
+#: data/spells.m4:62
+msgid "white book"
+msgstr "bila kniha"
+
+#: data/spells.m4:63
+msgid "blue book"
+msgstr "modra kniha"
+
+#: data/spells.m4:64
+msgid "yellow book"
+msgstr "zluta kniha"
+
+#: data/spells.m4:65
+msgid "orange book"
+msgstr "oranzova kniha"
+
+#: data/spells.m4:66
+msgid "purple book"
+msgstr "purpurova kniha"
+
+#: data/spells.m4:67
+msgid "gray book"
+msgstr "seda kniha"
+
+#: data/spells.m4:68
+msgid "black book"
+msgstr "cerna kniha"
+
+#: data/spells.m4:69
+msgid "green book"
+msgstr "zelena kniha"
+
+#: data/spells.m4:70
+msgid "cyan book"
+msgstr "tyrkysova kniha"
+
+#: data/spells.m4:71
+msgid "mauve book"
+msgstr "fialova kniha"
+
+#: data/spells.m4:72
+msgid "pink book"
+msgstr "ruzova kniha"
+
+#: data/spells.m4:73
+msgid "brown book"
+msgstr "hneda kniha"
+
+#: data/spells.m4:80
+msgid "book of spells"
+msgstr "kniha kouzel"
+
+#: data/spells.m4:88
+msgid "faded book"
+msgstr "vyblednuta kniha"
+
+#: data/spells.m4:97
+msgid "book of basic spells"
+msgstr "Kniha zakladnich kouzel"
+
+#: data/spells.m4:196
+msgid "The pages of this book are too faded to be read anymore."
+msgstr "Stranky teto knihy jsou prilis vybledle na cteni."
+
+#: data/spells.m4:206
+msgid "The spellbook fades."
+msgstr "Kniha vybledla."
+
+#: data/spells.m4:330
+#, c-format
+msgid "This book is titled '%s'."
+msgstr "Kniha je nadepsana '%s'."
+
+#: data/spells.m4:331
+msgid "Read it?"
+msgstr "Precist?"
+
+#: data/spells.m4:334
+msgid "You've already read that book."
+msgstr "Tuto knihu jsi jiz precetl."
+
+#: data/spells.m4:344
+#, c-format
+msgid "You resume reading at page %li"
+msgstr "Pokracujes ve cteni na strane %li"
+
+#: data/spells.m4:346
+msgid "You start reading."
+msgstr "Zacal jsi cist"
+
+#: data/spells.m4:372
+msgid "Improvisational Armed Fighting"
+msgstr "Zdokonaly boj se zbranemi"
+
+#: data/spells.m4:374
+msgid "You improve your weapon skills."
+msgstr "Zlepsil jsi sve dovednosti se zbranemi."
+
+#: data/spells.m4:393
+msgid "Gems and Minerals"
+msgstr "Drahokamy a mineraly"
+
+#: data/spells.m4:395
+msgid "You learn how to recognize various types of gems."
+msgstr "Naucil jsi se rozpoznavat ruzne druhy kamenu."
+
+#: data/spells.m4:485 data/spells.m4:504
+msgid "You need a staff ready to cast that spell."
+msgstr "K seslani kouzla potrebujes hulku."
+
+#: data/spells.m4:492
+msgid "A lit field surrounds you."
+msgstr "Obklopilo te pole svetla."
+
+#: data/spells.m4:507
+msgid "You need two coins to cast that spell."
+msgstr "Na seslani kouzla potrebujes dva zlataky."
+
+#: data/spells.m4:533
+msgid "To cast that spell, you need a rattlesnake tooth."
+msgstr "K seslani kouzla poterbujes zub chrestyse."
+
+#: data/spells.m4:539
+msgid "You hear maniacal laughter."
+msgstr "Slysis sileny smich."
+
+#: data/spells.m4:556
+msgid "You need a blank scroll to cast that spell."
+msgstr "Potrebujes prazdny svitek na seslani kouzla."
+
+#: data/spells.m4:584
+msgid "You feel crowded."
+msgstr "Citis se precpany."
+
+#: data/spells.m4:605
+msgid "That spell does not work here."
+msgstr "Tohle kouzlo zde nefunguje."
+
+#: data/spells.m4:608
+msgid "Suddenly you stand somewhere else."
+msgstr "Najednou stojis uplne jinde."
+
+#: data/spells.m4:624
+msgid "You are purified of poison and disease."
+msgstr "Jsi ocisten od jedu a nemoci."
+
+#: data/spells.m4:626
+msgid "You are purified of poison."
+msgstr "Jsi ocisten od jedu."
+
+#: data/spells.m4:628
+msgid "You are purified of disease."
+msgstr "Jsi ocisten od nemoci."
+
+#: data/spells.m4:630
+msgid "You are already pure."
+msgstr "Uz jsi cisty."
+
+#: data/spells.m4:650
+msgid "An angel appears by your side!"
+msgstr "Andel se objevil po tvem boku!"
+
+#: data/spells.m4:700
+msgid "In what direction"
+msgstr "V jakem smeru"
+
+#: data/spells.m4:714
+#, c-format
+msgid "The %s is unaffected."
+msgstr "%s je neovlivnen."
+
+#: data/spells.m4:718 dll/dll.c:244
+#, c-format
+msgid "The %s looks better."
+msgstr "%s vypada lepe."
+
+#: data/spells.m4:786
+msgid "To cast that spell, you will need a staff or rod."
+msgstr "Pro seslani tohoto kouzla potrebujes hulku nebo proutek."
+
+#: data/spells.m4:792
+msgid ""
+"To cast that spell, you will need a rattlesnake tooth, which will be "
+"destroyed by the casting."
+msgstr "Pro seslani kouzla potrebujes zub chrestyse, ktery po seslani zmizi."
+
+#: data/spells.m4:798
+msgid ""
+"To cast that spell, you will need a staff or rod and two coins, which will "
+"be destroyed by the casting."
+msgstr "Pro seslani kouzla potrebujes hulku nebo proutek a dva zlataky, kteri po seslani zmizi."
+
+#: data/spells.m4:804
+msgid "To cast that spell, you will to draw some blood with a dagger."
+msgstr "Pro seslani kouzla potrebujes trochu ziskat trochu krve dykou."
+
+#: data/spells.m4:810
+msgid "To cast that spell, you will need some paper."
+msgstr "Pro seslani kouzla potrebujes papir."
+
+#: data/tiles.m4:111
+msgid "The door is locked."
+msgstr "Dvere jsou zamcene."
+
+#: data/tiles.m4:119 data/tiles.m4:133 data/tiles.m4:147
+msgid "You evade the trap."
+msgstr "Vyhnul jsi se pasti."
+
+#: data/tiles.m4:123
+msgid "You fall into a pit!"
+msgstr "Spadl jsi do jamy!"
+
+#: data/tiles.m4:124
+msgid "Killed by a pit trap"
+msgstr "Zabit pasti"
+
+#: data/tiles.m4:137
+msgid "You are hit by a dart!"
+msgstr "Jsi zasahnut sipkou!"
+
+#: data/tiles.m4:138
+msgid "Killed by a dart trap"
+msgstr "Zabit sipkou"
+
+#: data/tiles.m4:151
+msgid "A tower of flame erupts from the floor!"
+msgstr "Ze zeme vyslehl proud plamenu!"
+
+#: data/tiles.m4:152
+msgid "Killed by a fire trap"
+msgstr "Zabit ohnivou pasti"
+
+#: data/tiles.m4:185
+msgid "There is a fountain here. Drink from it?"
+msgstr "Je tu fontana, chces se z ni napit?"
+
+#: data/tiles.m4:193
+msgid "The water heals you."
+msgstr "Voda te leci."
+
+#: data/tiles.m4:196 data/tiles.m4:261
+msgid "The water is warm."
+msgstr "Voda je horka."
+
+#: data/tiles.m4:223
+msgid "The water tastes funky."
+msgstr "Voda je plesniva."
+
+#: data/tiles.m4:267
+msgid "The fountain dries up."
+msgstr "Fontana vyschla."
+
+#: data/tiles.m4:277
+msgid "This fountain is dried up."
+msgstr "Fontana je vyschla."
+
+#: data/tiles.m4:288
+msgid "You get stuck in a giant spider web!"
+msgstr "Zamotal jsi se v siti obriho pavouka!"
+
+#: data/tiles.m4:291
+msgid "You tear through the webs."
+msgstr "Protrhavas se skrz site."
+
+#: src/actions.c:48
+msgid "Walk left"
+msgstr "Jit doleva"
+
+#: src/actions.c:49
+msgid "Run left"
+msgstr "Bezet doleva"
+
+#: src/actions.c:51
+msgid "Scroll view left"
+msgstr "Podivat se doleva"
+
+#: src/actions.c:53
+msgid "Wait"
+msgstr "Cekat"
+
+#: src/actions.c:54
+msgid "Climb stairs"
+msgstr "Vylezt po schodech"
+
+#: src/actions.c:55
+msgid "Show inventory"
+msgstr "Zobrazit predmety"
+
+#: src/actions.c:56
+msgid "Fire readied ammo"
+msgstr "Vystrelit pripravenou munici"
+
+#: src/actions.c:57
+msgid "Cast spell"
+msgstr "Seslat kouzlo"
+
+#: src/actions.c:58
+msgid "Use item"
+msgstr "Pouzit predmet"
+
+#: src/actions.c:59
+msgid "Equip item"
+msgstr "Pripravit predmet"
+
+#: src/actions.c:60
+msgid "Equip items"
+msgstr "Pripravit predmety"
+
+#: src/actions.c:61
+msgid "Take off item"
+msgstr "Sundat predmet"
+
+#: src/actions.c:62
+msgid "Take off items"
+msgstr "Sundat predmety"
+
+#: src/actions.c:63
+msgid "Drop item"
+msgstr "Zahodit predmet"
+
+#: src/actions.c:64
+msgid "Drop items"
+msgstr "Zahodit predmety"
+
+#: src/actions.c:65
+msgid "Pick up items"
+msgstr "Zvednout predmety"
+
+#: src/actions.c:66
+msgid "Throw item"
+msgstr "Hodit predmet"
+
+#: src/actions.c:67
+msgid "Show message history"
+msgstr "Ukazat historii zprav"
+
+#: src/actions.c:68
+msgid "Show known item types"
+msgstr "Ukazat zname predmety"
+
+#: src/actions.c:69
+msgid "Search"
+msgstr "Hledat"
+
+#: src/actions.c:70
+msgid "Open door"
+msgstr "Otevrit dvere"
+
+#: src/actions.c:71
+msgid "Close door"
+msgstr "Zavrit dvere"
+
+#: src/actions.c:72 src/crogue.c:181
+msgid "Options"
+msgstr "Nastaveni"
+
+#: src/actions.c:73 src/crogue.c:178
+msgid "Help"
+msgstr "Napoveda"
+
+#: src/actions.c:74
+msgid "Character info"
+msgstr "Informace o postave"
+
+#: src/actions.c:75
+msgid "About"
+msgstr "O programu"
+
+#: src/actions.c:77
+msgid "Debug"
+msgstr "Wizzard mode"
+
+#: src/actions.c:79
+msgid "Hotkey item"
+msgstr "Klavesy"
+
+#: src/actions.c:80
+msgid "Redraw screen"
+msgstr "Prekreslit obrazovku"
+
+#: src/actions.c:81 src/crogue.c:182 src/player.c:467
+msgid "Quit"
+msgstr "Konec"
+
+#: src/actions.c:82
+msgid "Save game"
+msgstr "Ulozit hru"
+
+#: src/ai.c:60
+#, c-format
+msgid "The %s regenerates!"
+msgstr "%s regeneruje!"
+
+#: src/ai.c:84
+#, c-format
+msgid "The %s regains its courage."
+msgstr "%s se vratila odvaha."
+
+#: src/crogue.c:177
+msgid "New game"
+msgstr "Nova hra"
+
+#: src/crogue.c:179
+msgid "Tutorial"
+msgstr "Vyuka"
+
+#: src/crogue.c:180
+msgid "High scores"
+msgstr "Nejvyssi score"
+
+#: src/crogue.c:250
+msgid "You die..."
+msgstr "Zemrel jsi..."
+
+#: src/crogue.c:266
+msgid "Since you used debug features, your game will not be scored."
+msgstr "Protoze jsi pouzival wizzard mod, score nebude zaznamenane."
+
+#: src/crogue.c:321
+msgid "You feel the Amulet sucking your energy away."
+msgstr "Citis, jak z tebe Amulet vysava magii."
+
+#: src/crogue.c:326
+msgid "You feel the Amulet sucking your life away."
+msgstr "Citis, jak z tebe Amulet vysava zivot."
+
+#: src/crogue.c:327
+msgid "Killed by the Amulet of Yendor"
+msgstr "Zabit silou \"Amulet of Yendor\""
+
+#: src/crogue.c:379
+msgid "You are starving!"
+msgstr "Hladovis!"
+
+#: src/crogue.c:380
+msgid "Starved to death."
+msgstr "Zemrel hlady."
+
+#: src/crogue.c:406
+msgid "Added random monster."
+msgstr "Pridana nahodna potvora."
+
+#: src/draw.c:29
+msgid " starving"
+msgstr "vyhladoveni"
+
+#: src/draw.c:31
+msgid " weak"
+msgstr "slaby"
+
+#: src/draw.c:33
+msgid " hungry"
+msgstr "hladovy"
+
+#: src/draw.c:72
+#, c-format
+msgid "HP??/%i "
+msgstr "HP??/$i "
+
+#: src/draw.c:74
+#, c-format
+msgid "HP%i/%i "
+msgstr "HP%i/%i "
+
+#: src/draw.c:76
+#, c-format
+msgid "PW%i/%i LV%i $:%li %s%s%s%s"
+msgstr "PW%i/%i LV%i $:%li %s%s%s%s"
+
+#: src/draw.c:84
+msgid " conf"
+msgstr "zmaten"
+
+#: src/draw.c:86
+msgid " hallu"
+msgstr "hallu"
+
+#: src/files.c:41
+msgid "WARNING: Not enough archive free. Using main memory."
+msgstr "VAROVANI: Nedostatek archivni pameti, pouzivam hlavni pamet."
+
+#: src/files.c:45
+msgid "Garbage collect archive memory?"
+msgstr "Uklidit archivni pamet?"
+
+#: src/files.c:47
+msgid "Garbage collecting archive memory."
+msgstr "Uklizim archivni pamet."
+
+#: src/files.c:52
+msgid "Still not enough archive free. Using main memory."
+msgstr "Stale malo archivni pameti, pouzivam hlavni pamet."
+
+#: src/files.c:56
+msgid "Not enough archive free. Using main memory."
+msgstr "Nedostatek archivni pameti, pouzivam hlavni pamet."
+
+#: src/files.c:174
+msgid "There's a corrupted save file here..."
+msgstr "Soubor z pozici je poskozen..."
+
+#: src/files.c:340
+msgid "This level is corrupt... I'll build a new one."
+msgstr "Soubor s poschodim je poskozen... vytvarim novy."
+
+#: src/items.c:111
+msgid "Weapons"
+msgstr "Zbrane"
+
+#: src/items.c:112
+msgid "Ammunition"
+msgstr "Munice"
+
+#: src/items.c:113
+msgid "Armor"
+msgstr "Zbroje"
+
+#: src/items.c:114
+msgid "Amulets"
+msgstr "Amulety"
+
+#: src/items.c:115
+msgid "Rings"
+msgstr "Prsteny"
+
+#: src/items.c:116
+msgid "Wands"
+msgstr "Hulky"
+
+#: src/items.c:117
+msgid "Potions"
+msgstr "Lektvary"
+
+#: src/items.c:118
+msgid "Scrolls"
+msgstr "Svitky"
+
+#: src/items.c:119
+msgid "Spellbooks"
+msgstr "Knihy"
+
+#: src/items.c:120
+msgid "Food"
+msgstr "Jidlo"
+
+#: src/items.c:121
+msgid "Gems"
+msgstr "Drahokamy"
+
+#: src/items.c:122
+msgid "Money"
+msgstr "Penize"
+
+#: src/items.c:123
+msgid "Tools"
+msgstr "Nastroje"
+
+#: src/items.c:470 src/items.c:502
+#, c-format
+msgid "You have %s."
+msgstr "Mas %s."
+
+#: src/items.c:480 src/items.c:510
+#, c-format
+msgid "You got the %s."
+msgstr "Ziskal jsi %s."
+
+#: src/items.c:487
+#, c-format
+msgid "You don't have room in your pack for the %s."
+msgstr "Nemas dost mista v batohu pro %s."
+
+#: src/items.c:517
+#, c-format
+msgid "The %s %s from your grasp."
+msgstr "%s %s z tveho chapani."
+
+#: src/items.c:678
+msgid "pristine "
+msgstr "duverny"
+
+#: src/items.c:679
+msgid "slightly rusty "
+msgstr "lehce rezave"
+
+#: src/items.c:680
+msgid "rusty "
+msgstr "rezave"
+
+#: src/items.c:681
+msgid "very rusty "
+msgstr "velmi rezave"
+
+#: src/items.c:708
+msgid "cursed "
+msgstr "proklete"
+
+#: src/items.c:719
+#, c-format
+msgid " (%li charges)"
+msgstr " (%li pouziti)"
+
+#: src/items.c:728
+msgid " (wielded)"
+msgstr " (pouzivana)"
+
+#: src/items.c:730
+msgid " (readied)"
+msgstr " (pripravene)"
+
+#: src/items.c:731
+msgid " (worn)"
+msgstr " (nosene)"
+
+#: src/items.c:735
+#, c-format
+msgid " (%li gold)"
+msgstr " (%li zlata)"
+
+#: src/items.c:750
+msgid "St"
+msgstr "Si"
+
+#: src/items.c:751
+msgid "Dx"
+msgstr "Ob"
+
+#: src/items.c:752
+msgid "To"
+msgstr "Od"
+
+#: src/items.c:753
+msgid "Ma"
+msgstr "Ma"
+
+#: src/items.c:754
+msgid "Wi"
+msgstr "Vu"
+
+#: src/items.c:756
+msgid "Spd"
+msgstr "Rych"
+
+#: src/items.c:830
+#, c-format
+msgid "Your %s rusts!"
+msgstr "Tvoje %s rezavi!"
+
+#: src/items.c:836
+#, c-format
+msgid "Your %s rusts further!"
+msgstr "Tvuj %s zrezavel!"
+
+#: src/items.c:841
+#, c-format
+msgid "Your %s collapses into a pile of rust."
+msgstr "Tvuj %s se rozpadl v hromadku rzi."
+
+#: src/items.c:868
+#, c-format
+msgid "Fix your %s for %li gold?"
+msgstr "Opravit %s za %li zlata?"
+
+#: src/items.c:871
+msgid "You don't have enough money."
+msgstr "Nemas dost penez."
+
+#: src/items.c:875
+#, c-format
+msgid "Your %s is fixed."
+msgstr "tvoje %s je opravena."
+
+#: src/items.c:1002
+msgid "You haven't identified anything interesting."
+msgstr "Neidentifikoval jsi nic zajimaveho."
+
+#: src/items.c:1130
+#, c-format
+msgid "WARNING: Damaged item chain at (%i,%i)"
+msgstr "VAROVANI: Poskozeny retez predmetu v (%i,%i)"
+
+#: src/items.c:1310 src/items.c:1330
+msgid "You don't have anything to drop."
+msgstr "Nemas nic na zahozeni."
+
+#: src/items.c:1314 src/items.c:1333
+msgid "Drop what?"
+msgstr "Zahodit co?"
+
+#: src/items.c:1318 src/items.c:1410 src/items.c:1486 src/items.c:1626
+#: src/spell.c:76 src/spell.c:269 src/throw.c:43 src/use.c:40
+msgid "Never mind."
+msgstr "Nikdy."
+
+#: src/items.c:1349
+msgid "You need to unwield it first."
+msgstr "Nejdrive to musis sundat."
+
+#: src/items.c:1352
+msgid "You can't drop something you're wearing."
+msgstr "Nemuzes zahodit neco dokud nosis."
+
+#: src/items.c:1360
+msgid "You can't sell gold."
+msgstr "Nemuzes prodat zlato."
+
+#: src/items.c:1364
+#, c-format
+msgid "Sell your %s for %li gold?"
+msgstr "Prodat %s za %li zlata?"
+
+#: src/items.c:1366
+#, c-format
+msgid "You sell the %s."
+msgstr "Prodal jsi %s."
+
+#: src/items.c:1369
+#, c-format
+msgid "You drop the %s."
+msgstr "Zahodil jsi %s."
+
+#: src/items.c:1402 src/items.c:1422
+msgid "You don't have anything to equip."
+msgstr "Nemas nic k pripraveni."
+
+#: src/items.c:1405 src/items.c:1425
+msgid "Equip what?"
+msgstr "Pripravit co?"
+
+#: src/items.c:1446
+msgid "You can't remove your old armor."
+msgstr "Nemuzes odstranit svoji starou zbroj."
+
+#: src/items.c:1447
+msgid "Your weapon is welded to your hand!"
+msgstr "Drzis zbran v ruce!"
+
+#: src/items.c:1452
+#, c-format
+msgid "You take off the %s"
+msgstr "Odlozil jsi %s"
+
+#: src/items.c:1453
+#, c-format
+msgid "You unready the %s"
+msgstr "Odlozil jsi %s"
+
+#: src/items.c:1454
+#, c-format
+msgid "You unwield the %s"
+msgstr "Odlozil jsi %s"
+
+#: src/items.c:1477 src/items.c:1498
+msgid "You don't have anything to unequip."
+msgstr "Nemas nic k sundani."
+
+#: src/items.c:1481 src/items.c:1501
+msgid "Unequip what?"
+msgstr "Sundat co?"
+
+#: src/items.c:1513
+msgid "You aren't wearing/wielding that."
+msgstr "Nedrzis to."
+
+#: src/items.c:1519
+msgid "You can't. It seems to be cursed."
+msgstr "Nemuzes, je to proklete."
+
+#: src/items.c:1526
+#, c-format
+msgid "You take off the %s."
+msgstr "Odlozil jsi %s."
+
+#: src/items.c:1527
+#, c-format
+msgid "You unready the %s."
+msgstr "Odlozil jsi %s."
+
+#: src/items.c:1528
+#, c-format
+msgid "You unwield the %s."
+msgstr "Odlozil jsi %s."
+
+#: src/items.c:1545
+msgid "You see many items here."
+msgstr "Vidis tu spoustu predmetu."
+
+#: src/items.c:1547
+msgid "You see several items here."
+msgstr "Vidis tu par predmetu."
+
+#: src/items.c:1549
+#, c-format
+msgid "You see a %s here."
+msgstr "Vidis %s."
+
+#: src/items.c:1590
+msgid "You can't afford that."
+msgstr "Nemuzes si to dovolit."
+
+#: src/items.c:1622
+msgid "Hotkey which item?"
+msgstr "Ktery predmet ke zkratce?"
+
+#: src/items.c:1629
+msgid "Use what hotkey? [0-9]"
+msgstr "Jakou klvesu? [0-9]"
+
+#: src/items.c:1637 src/prompt.c:61
+msgid "Invalid selection."
+msgstr "Spatna volba."
+
+#: src/magic.c:67
+msgid "You have nothing to identify."
+msgstr "Nemas nic k identifikovani."
+
+#: src/magic.c:71
+msgid "Identify what?"
+msgstr "Identifikovat co?"
+
+#: src/magic.c:76
+msgid "You waste the spell."
+msgstr "Vyplytval jsi kouzlo."
+
+#: src/magic.c:92
+msgid "You break free of the webs."
+msgstr "Osvobodil jsi se ze siti."
+
+#: src/magic.c:105
+msgid "You are no longer confused."
+msgstr "Uz nejsi zmaten."
+
+#: src/magic.c:118
+msgid "You stop hallucinating."
+msgstr "Prestal jsi mit halucinace."
+
+#: src/magic.c:131
+msgid "You can move again."
+msgstr "Muzes se znovu hybat."
+
+#: src/magic.c:144
+msgid "The area around you is bright again."
+msgstr "Tvoje okoli je opet jasnejsi."
+
+#: src/magic.c:187
+msgid ""
+"You feel excrutiating pain as the feeling returns to your body.You have "
+"seriously abused your system."
+msgstr "Citis silenou bolest, jak se ti vraci cit do tela. Vazne jsi ztyral sve telo."
+
+#: src/magic.c:204
+msgid "You feel a sharp pain as the feeling returns to your body."
+msgstr "Citis ostrou bolest, jak se ti vraci cit do tela."
+
+#: src/magic.c:206
+msgid "Feeling returns to your body."
+msgstr "Vraci se ti cit do tela."
+
+#: src/magic.c:214
+msgid "Your vision darkens."
+msgstr "Tvuj zrak bledne."
+
+#: src/magic.c:231
+msgid "You have nothing to uncurse."
+msgstr "Nemas nic k odekleti."
+
+#: src/magic.c:234
+msgid "Uncurse which item?"
+msgstr "Odeklit co?"
+
+#: src/magic.c:239 src/magic.c:266
+msgid "You waste the scroll."
+msgstr "Vyplytval jsi svitek."
+
+#: src/magic.c:245
+msgid "It glows for a moment."
+msgstr "Na chvili zhne."
+
+#: src/magic.c:258
+msgid "You have nothing to enchant."
+msgstr "Nemas nic k ocarovani."
+
+#: src/magic.c:261
+msgid "Enchant what?"
+msgstr "Ocarovat co?"
+
+#: src/magic.c:272
+#, c-format
+msgid "The %s glows in white light."
+msgstr "%s zhne v bilem svetle."
+
+#: src/magic.c:288
+#, c-format
+msgid "The %s glows in blue light."
+msgstr "%s zhne v modrem svetle."
+
+#: src/messagefield.c:176
+msgid "-More-"
+msgstr "-vice-"
+
+#: src/monst.c:178
+msgid "bugblatter beast of Traal"
+msgstr "blba zaba z Traalu"
+
+#: src/monst.c:179
+msgid "greater hell beast"
+msgstr "pekelna bestie"
+
+#: src/monst.c:180
+msgid "invisible Asmodeus"
+msgstr "neviditelny Asmodeus"
+
+#: src/monst.c:181
+msgid "power grid bug"
+msgstr "chyba v elektricke siti"
+
+#: src/monst.c:182
+msgid "pet kitten"
+msgstr "kotatko"
+
+#: src/monst.c:183
+msgid "Usenet troll"
+msgstr "Usenet troll"
+
+#: src/monst.c:184
+msgid "quantum mechanic"
+msgstr "kvantovy mechanic"
+
+#: src/monst.c:185
+msgid "Santa Claus"
+msgstr "Santa Claus"
+
+#: src/monst.c:186
+msgid "Grinch"
+msgstr "Navara"
+
+#: src/monst.c:187
+msgid "giant hair"
+msgstr "Obri vlasy"
+
+#: src/monst.c:322
+#, c-format
+msgid "The %s attacks from behind but misses!"
+msgstr "%s zautocil zezadu, ale minul!"
+
+#: src/monst.c:325
+#, c-format
+msgid "The %s misses!"
+msgstr "%s minul!"
+
+#: src/monst.c:402
+#, c-format
+msgid "The %s is killed!"
+msgstr "%s je zabit!"
+
+#: src/monst.c:598
+#, c-format
+msgid "The %s turns to flee!"
+msgstr "%s utika!"
+
+#: src/monst.c:606
+#, c-format
+msgid "The %s is dazed."
+msgstr "%s omameny."
+
+#: src/options.c:34
+msgid "Yes"
+msgstr "Ano"
+
+#: src/options.c:35
+msgid "No"
+msgstr "Ne"
+
+#: src/options.c:36
+msgid "Prompt"
+msgstr "Zeptat se"
+
+#: src/options.c:39
+msgid "Small"
+msgstr "Maly"
+
+#: src/options.c:40
+msgid "Large"
+msgstr "Velky"
+
+#: src/options.c:45
+msgid "Auto-pickup"
+msgstr "Automaticky sber"
+
+#: src/options.c:49
+msgid "Auto-follow-stairs"
+msgstr "Automaticky lezt schody"
+
+#: src/options.c:54
+msgid "Tile size"
+msgstr "Velikost pole"
+
+#: src/options.c:58
+msgid "Font size"
+msgstr "Velikost fontu"
+
+#: src/options.c:62
+msgid "Archive saves"
+msgstr "Archivovat pozice"
+
+#: src/options.c:66
+msgid "Archive scores"
+msgstr "Archivovat score"
+
+#: src/options.c:70
+msgid "Use grayscale"
+msgstr "Sedobarvost"
+
+#: src/pet.c:79
+#, c-format
+msgid "The %s misses the %s!"
+msgstr "%s minul %s!"
+
+#: src/pet.c:81
+#, c-format
+msgid "The %s misses something!"
+msgstr "%s cosi minul!"
+
+#: src/pet.c:83
+#, c-format
+msgid "The %s evades something!"
+msgstr "%s cemusi uhnul!"
+
+#: src/player.c:298
+msgid "You can't go up or down from here."
+msgstr "Tady nemuzes jit ani nahoru ani dolu."
+
+#: src/player.c:308
+msgid "Leave the dungeon?"
+msgstr "Opustit podzemi?"
+
+#: src/player.c:309
+msgid "Left the dungeon"
+msgstr "Opustil podzemi"
+
+#: src/player.c:389
+msgid "You are empty-handed."
+msgstr "Mas prazdne ruce"
+
+#: src/player.c:458
+msgid "Really quit?"
+msgstr "Opravdu odejit?"
+
+#: src/player.c:460
+msgid "Save this game?"
+msgstr "Ulozit hru?"
+
+#: src/player.c:489
+msgid ""
+"CalcRogue by Jim Babcock, 2002. This program is postcardware. If you enjoy "
+"it, send the author a postcard at 16 Sweeney Ridge Rd, Bedford, MA, USA, ZIP "
+"code 01730"
+msgstr ""
+"CalcRogue od Jima Babcocka, 2002. "
+"Postcardware - pokud se vam libi, poslete pohlednici na "
+"16 Sweeney Ridge Rd, Bedford, MA, USA, ZIP 01730 "
+"Preklad (a navrhy) na nobody@shalmirane.net"
+
+#: src/player.c:544
+#, c-format
+msgid "Unrecognized key code: %i"
+msgstr "Neznama klavesa: %i"
+
+#: src/player.c:546 src/player.c:548
+msgid "Invalid command."
+msgstr "Neznamy prikaz."
+
+#: src/player.c:579 src/player.c:664
+msgid "You are stuck in the webs!"
+msgstr "Visis v sitich!"
+
+#: src/player.c:584
+msgid "You are confused."
+msgstr "Jsi zmateny."
+
+#: src/player.c:597
+msgid "You slip and fall!"
+msgstr "Uklouznul jsi a padas!"
+
+#: src/player.c:627
+#, c-format
+msgid "Really attack the %s?"
+msgstr "Opravdu zautocit na %s?"
+
+#: src/player.c:704
+#, c-format
+msgid "You hit the %s."
+msgstr "Zasahl jsi %s."
+
+#: src/player.c:708
+#, c-format
+msgid "You miss the %s."
+msgstr "Minul jsi %s."
+
+#: src/player.c:736
+msgid "You feel weaker."
+msgstr "Citis se slabsi."
+
+#: src/player.c:737
+msgid "You feel clumsy."
+msgstr "Citis se nemotorny."
+
+#: src/player.c:738
+msgid "You feel sickly."
+msgstr "Citis se nemocny."
+
+#: src/player.c:739
+msgid "You feel tired."
+msgstr "Citis se unaveny."
+
+#: src/player.c:740
+msgid "You feel naive."
+msgstr "Citis se naivni."
+
+#: src/player.c:743
+msgid "You feel stronger."
+msgstr "Citis se silnejsi."
+
+#: src/player.c:744
+msgid "Your coordination improves."
+msgstr "Tvoje koordinace se zlepsuje."
+
+#: src/player.c:745
+msgid "You feel tougher."
+msgstr "Citis se odolnejsi."
+
+#: src/player.c:746
+msgid "You feel powerful."
+msgstr "Citis se mocny."
+
+#: src/player.c:747
+msgid "You feel skeptical."
+msgstr "Citis se skeptictejsi."
+
+#: src/player.c:750
+msgid "You feel your strength returning."
+msgstr "Citis, jak se ti vraci sila."
+
+#: src/player.c:751
+msgid "You feel less clumsy."
+msgstr "Citis se mene nemotorny."
+
+#: src/player.c:752
+msgid "You feel restored to health."
+msgstr "Citis se uzdraven."
+
+#: src/player.c:753
+msgid "You feel restored."
+msgstr "Citis se uzdraven."
+
+#: src/player.c:754
+msgid "You feel less naive."
+msgstr "Citis se mene naivni."
+
+#: src/player.c:823
+#, c-format
+msgid "You enter %s."
+msgstr "Vstoupil jsi do %s."
+
+#: src/player.c:867
+msgid "The door is blocked."
+msgstr "Dvere jsou zablokovane."
+
+#: src/player.c:876
+msgid "You see no door there."
+msgstr "Nevidis tu zadne dvere."
+
+#: src/player.c:898
+msgid "You found a secret door!"
+msgstr "Nasel jsi tajne dvere!"
+
+#: src/player.c:905
+msgid "You found a trap!"
+msgstr "Nasel jsi past!"
+
+#: src/player.c:929
+msgid "You gained a level!"
+msgstr "ZISKAL JSI UROVEN!"
+
+#: src/player.c:946
+#, c-format
+msgid "Level %i %s\n"
+msgstr "Uroven %i %s\n"
+
+#: src/player.c:947 src/player.c:953 src/player.c:958
+msgid "\n"
+msgstr "\n"
+
+#: src/player.c:948
+#, c-format
+msgid "Strength\t    %i\t (%i)\n"
+msgstr "Sila\t    %i\t (%i)\n"
+
+#: src/player.c:949
+#, c-format
+msgid "Dexterity\t   %i\t (%i)\n"
+msgstr "Obratnost\t   %i\t (%i)\n"
+
+#: src/player.c:950
+#, c-format
+msgid "Toughness\t   %i\t (%i)\n"
+msgstr "Odolnost\t   %i\t (%i)\n"
+
+#: src/player.c:951
+#, c-format
+msgid "Mana\t   \t   %i\t (%i)\n"
+msgstr "Magie\t   \t   %i\t (%i)\n"
+
+#: src/player.c:952
+#, c-format
+msgid "Willpower\t   %i\t (%i)\n"
+msgstr "Sila vule\t   %i\t (%i)\n"
+
+#: src/player.c:954
+#, c-format
+msgid "Speed %i\n"
+msgstr "Rychlost %i\n"
+
+#: src/player.c:955
+#, c-format
+msgid "DV %i(%i)\n"
+msgstr "DV %i(%i)\n"
+
+#: src/player.c:956
+#, c-format
+msgid "PV %i(%i)\n"
+msgstr "PV %i(%i)\n"
+
+#: src/player.c:957
+#, c-format
+msgid "Damage %i-%i\n"
+msgstr "Poskozeni %i-%i\n"
+
+#: src/player.c:959
+msgid "Weapon skills\n"
+msgstr "Dovednosti se zbranemi\n"
+
+#: src/prompt.c:32
+#, c-format
+msgid "%s [Y/N]"
+msgstr "%s [Y/N]"
+
+#: src/prompt.c:86
+msgid "Invalid direction,"
+msgstr "Spatny smer,"
+
+#: src/rle.c:163
+#, c-format
+msgid "File checksum doesn't match! %lp vs %lp, size=%i, granularity=%i"
+msgstr "Kontrolni soucet souboru nesouhlasi! %lp vs %lp, velikost=%i, nespojitost=%i"
+
+#: src/score.c:90
+msgid ""
+"\n"
+"HIGH SCORES\n"
+"\n"
+msgstr ""
+"\n"
+"NEJVYSSI SCORE\n"
+"\n"
+
+#: src/score.c:107
+#, c-format
+msgid ""
+"\n"
+"%li games played"
+msgstr ""
+"\n"
+"odehrano %li her"
+
+#: src/score.c:109
+#, c-format
+msgid ""
+"\n"
+"Your score was %li"
+msgstr ""
+"\n"
+"Tvoje skore %li"
+
+#: src/score.c:140
+msgid ""
+"My scores file has been tampered with...\n"
+"Did you think I wouldn't notice?"
+msgstr ""
+"Nekdo si pohraval s tabulkou skore...\n"
+"Myslel's ze si nevsimnu ?"
+
+#: src/score.c:193
+msgid "Error writing score file."
+msgstr "Chyba pri zapisu skore do souboru."
+
+#: src/skill.c:41
+msgid "bows"
+msgstr "luky"
+
+#: src/skill.c:42
+msgid "crossbows"
+msgstr "kusemi"
+
+#: src/skill.c:43
+msgid "clubs"
+msgstr "kyji"
+
+#: src/skill.c:44
+msgid "daggers"
+msgstr "dykami"
+
+#: src/skill.c:45
+msgid "staves"
+msgstr "holemi"
+
+#: src/skill.c:46
+msgid "maces"
+msgstr "palcaty"
+
+#: src/skill.c:47
+msgid "swords"
+msgstr "meci"
+
+#: src/skill.c:48
+msgid "axes"
+msgstr "sekerami"
+
+#: src/skill.c:112
+#, c-format
+msgid "You improve your skill with %s to level %i."
+msgstr "Zlepsil jsi sve dovednosti s %s na uroven %i."
+
+#: src/spell.c:54
+msgid "You don't understand the language."
+msgstr "Nerozumis jazyku."
+
+#: src/spell.c:56
+msgid "This book is filled with religious mumbo-jumbo."
+msgstr "Kniha je plna nabozenskych mambo-jumbo."
+
+#: src/spell.c:58
+msgid "This book is filled with evil rituals."
+msgstr "Kniha je plna dabelskych ritualu."
+
+#: src/spell.c:69
+msgid "Study which spell?"
+msgstr "Ktere kouzlo studovat?"
+
+#: src/spell.c:106
+msgid "You know that spell practically by heart."
+msgstr "Znac to kouzlo prakticky od srdce."
+
+#: src/spell.c:111
+msgid "You know that spell already."
+msgstr "To kouzlo jiz znas."
+
+#: src/spell.c:122
+msgid "That spell is beyond your ability."
+msgstr "Tohle kouzlo je mimo tve nynejsi schopnosti."
+
+#: src/spell.c:131
+msgid "Sorry, Mr. Osbourne, but my brain is full."
+msgstr "Prominte, pane Osbourne, ale muj mozek je plny."
+
+#: src/spell.c:133
+msgid "You can't learn any more spells yet."
+msgstr "Nyni se nemuzes naucit zadna dalsi kouzla."
+
+#: src/spell.c:143
+msgid "Your concentration is broken."
+msgstr "Tva koncentrace je narusena."
+
+#: src/spell.c:158
+#, c-format
+msgid "You refresh your memory of the '%s' spell."
+msgstr "Obnovil jsi si kouzlo '%s'."
+
+#: src/spell.c:166
+#, c-format
+msgid "You learn the '%s' spell."
+msgstr "Naucil jsi se kouzlo '%s'."
+
+#: src/spell.c:217
+msgid "memorized"
+msgstr "zapamatovano"
+
+#: src/spell.c:219
+msgid "known"
+msgstr "zname"
+
+#: src/spell.c:221
+msgid "forgotten"
+msgstr "zapomenute"
+
+#: src/spell.c:253
+msgid "You don't know any spells."
+msgstr "Neznas zadna kouzla."
+
+#: src/spell.c:259
+msgid "You are too confused to cast spells!"
+msgstr "Jsi prilis zmaten na sesilani kouzel!"
+
+#: src/spell.c:277
+msgid "You've forgotten that spell.\n"
+msgstr "To kouzlo jsi zapomnel.\n"
+
+#: src/spell.c:283
+msgid "You don't have enough power to cast that spell."
+msgstr "Nemas dost magie na seslani toho kouzla."
+
+#: src/throw.c:35
+msgid "You don't have anything to throw."
+msgstr "Nemas nic k hozeni."
+
+#: src/throw.c:38
+msgid "Throw what?"
+msgstr "Hodit co?"
+
+#: src/throw.c:62
+msgid "You don't have any ammunition readied."
+msgstr "Nemas pripravenou zadnou munici."
+
+#: src/throw.c:90
+msgid "You need an appropriate launcher for that ammo."
+msgstr "Potrebujes prislusny odpalovac pro tu munici."
+
+#: src/throw.c:92
+msgid "You need a launcher for that ammo."
+msgstr "Potrebujes odpalovac pro tu munici."
+
+#: src/throw.c:97
+msgid "You can't throw something you're wearing."
+msgstr "Nemuzes hodit neco co nosis."
+
+#: src/throw.c:130
+#, c-format
+msgid "The %s hits the %s."
+msgstr "%s zasahl %s."
+
+#: src/throw.c:135
+#, c-format
+msgid "The %s dodges the %s."
+msgstr "%s vykryl %s."
+
+#: src/throw.c:142
+#, c-format
+msgid "The %s shatters!"
+msgstr "%s se rozpadl!"
+
+#: src/throw.c:144
+#, c-format
+msgid "The %s breaks."
+msgstr "%s se zlomil."
+
+#: src/tilefield.c:83
+msgid "Use the number keys (1-9) to move."
+msgstr "Pouzij ciselne klavesy (1-9) pro pohybovani."
+
+#: src/use.c:33
+msgid "You don't have anything you can use."
+msgstr "Nemas nic co by jsi mohl pouzit."
+
+#: src/use.c:36
+msgid "Use what?"
+msgstr "Pouzit co?"
+
+#: src/use.c:58
+msgid "You can't use that."
+msgstr "Nemuzes to pouzit."
+
+#: dll/debug.c:76
+msgid "Warning: If you use debug features, you will not receive a score. Continue?"
+msgstr "Varovani: pokud budes pouzivat wizzard mod, nebude se zaznamenavat tve score. Pokracovat?"
+
+#: dll/debug.c:111
+#, c-format
+msgid "Free memory: %li"
+msgstr "Volna pamet: %li"
+
+#: dll/debug.c:113
+msgid "Free memory: Lots."
+msgstr "Volna pamet: hodne."
+
+#: dll/debug.c:130
+#, c-format
+msgid "Facing: %i, forced: %i"
+msgstr "Facing: %i, forced: %i"
+
+#: dll/debug.c:135
+msgid "This will end your game. Are you sure?"
+msgstr "Tohle skonci hru, Jsi si jisty?"
+
+#: dll/debug.c:138
+msgid "Exceptions are only used on TI calculators."
+msgstr "Exceptions are only used on TI calculators."
+
+#: dll/debug.c:151
+#, c-format
+msgid "Current time is %li."
+msgstr "Aktualni cas %li."
+
+#: dll/debug.c:180
+msgid "Checking memory... "
+msgstr "Overuji pamet... "
+
+#: dll/debug.c:182
+#, c-format
+msgid "Only %li bytes of RAM left! "
+msgstr "Pouze %li B volne pameti!"
+
+#: dll/debug.c:188
+msgid ""
+"\n"
+"Checking world/monster consistency... "
+msgstr ""
+"\n"
+"Checking world/monster consistency... "
+
+#: dll/debug.c:209
+#, c-format
+msgid "Found mis-marked monster at (%i, %i)! "
+msgstr "Found mis-marked monster at (%i, %i)! "
+
+#: dll/debug.c:214
+#, c-format
+msgid "Found overlapping %i monsters at (%i, %i): "
+msgstr "Found overlapping %i monsters at (%i, %i): "
+
+#: dll/debug.c:233
+#, c-format
+msgid "Found out of bounds monster at (%i, %i)! "
+msgstr "Found out of bounds monster at (%i, %i)! "
+
+#: dll/debug.c:239
+#, c-format
+msgid "Found monster on unmarked tile at (%i, %i)! "
+msgstr "Found monster on unmarked tile at (%i, %i)! "
+
+#: dll/debug.c:245
+msgid ""
+"\n"
+"Checking item chains... "
+msgstr ""
+"\n"
+"Checking item chains... "
+
+#: dll/debug.c:255
+#, c-format
+msgid "Invalid item at (%i, %i) has type %i! "
+msgstr "Invalid item at (%i, %i) has type %i! "
+
+#: dll/debug.c:268
+#, c-format
+msgid "Total number of items found does not match: expected %i, found %i. "
+msgstr "Total number of items found does not match: expected %i, found %i. "
+
+#: dll/debug.c:271
+#, c-format
+msgid ""
+"\n"
+"%i items stored, %i allocated. "
+msgstr ""
+"\n"
+"%i items stored, %i allocated. "
+
+#: dll/debug.c:272
+#, c-format
+msgid ""
+"\n"
+"%i monsters."
+msgstr ""
+"\n"
+"%i monsters."
+
+#: dll/debug.c:274
+#, c-format
+msgid ""
+"\n"
+"\n"
+"Summary: %i tests failed"
+msgstr ""
+"\n"
+"\n"
+"Summary: %i tests failed"
+
+#: dll/dll.c:144
+msgid "You are surrounded by a golden haze."
+msgstr "Jsi obklopen nazlatlou mlhou."
+
+#: dll/dll.c:153
+msgid "You need a dagger to cast that spell."
+msgstr "K seslani tohodle kouzla potrebujes dyku."
+
+#: dll/dll.c:155
+msgid "You need to rest a bit before you can use your blood for a spell."
+msgstr "Musis si trochu odpocinout, nez budes moci pouzit tvoji krev na kouzlo."
+
+#: dll/dll.c:157
+msgid "You need to remove your gloves to cast that spell."
+msgstr "Musis si sundat rukavice pred seslanim toho kouzla."
+
+#: dll/dll.c:160
+msgid "Killed by excessive blood loss"
+msgstr "Zabit ztratou krve."
+
+#: dll/dll.c:171
+msgid "Power ripples through your body."
+msgstr "Moc vlni skrz tve telo."
+
+#: dll/dll.c:178
+msgid "Your wounds heal quickly."
+msgstr "Tvoje zraneni se rychle hoji."
+
+#: dll/dll.c:184
+msgid "You feel a surge of adrenaline."
+msgstr "Citis vlnu adrenalinu."
+
+#: dll/dll.c:191
+msgid "You run out of breath."
+msgstr "Dochazi ti dech."
+
+#: dll/dll.c:198
+msgid "You catch your breath."
+msgstr "Chytnul jsi dech."
+
+#: dll/dll.c:231
+msgid "You sense chaos and confusion."
+msgstr "Citis chaos a zmateni."
+
+#: dll/dll.c:251
+#, c-format
+msgid "The %s looks much better."
+msgstr "%s vypada mnohem lepe."
+
+#: dll/dll.c:258
+#, c-format
+msgid "The %s looks completely healed."
+msgstr "%s vypada kompletne vylecen."
+
+#: dll/dll.c:265
+#, c-format
+msgid "The %s looks weaker."
+msgstr "%s vypada slabsi."
+
+#: dll/dll.c:350
+#, c-format
+msgid "These stairs lead to %s."
+msgstr "Schody vedou do %s."
+
+#: dll/dll.c:351
+msgid "Climb them?"
+msgstr "Vylezt?"
+
+#: dll/drawstring.c:111 dll/drawstring.c:156
+msgid " -More-"
+msgstr " -vice-"
+

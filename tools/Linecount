@@ -1,0 +1,13 @@
+#!/bin/sh
+echo -n "C sources:  "
+find . -name '*.c' -print |xargs cat |wc -l
+echo -n "C++ sources:"
+find . -name '*.cpp' -print |xargs cat |wc -l
+echo -n "Headers:    "
+find . -name '*.h' -print |xargs cat |wc -l
+echo -n "MBC/m4:     "
+find . -name '*.m4*' -print |xargs cat |wc -l
+echo -n "Files:      "
+find . -type f -print |wc -l
+
+

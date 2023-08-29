@@ -1,0 +1,31 @@
+Release goals:
+
+Gamma 1 (The Door at the End of the Tunnel)
+Gamma 2 (Grand Unification)
+Gamma 3 (Deep Magic)
+Gamma 4 (Multi-polymorphic-variable Calculus)
+Gamma 5 (Death of a Travelling Salesman)
+Gamma 6
+  Beta 6b:
+  X configure script
+  X New data toolchain
+  X Start class-specific quests/secondary classes
+  ~ Configurable keyboard
+  Beta 6c
+    Checkpoint saves
+	More class-specific quests
+  Beta 6d:
+    New data compiler
+    Finish class-specific quests/secondary classes
+  Beta 6e:
+    Item prefix/suffixes
+    Late-game segment
+    Limit shops' buying (?)
+    High score sharing (Calc)
+    High score sharing (Palm)
+
+Unspecified point:
+  pickup menu
+  Monster inventories?
+  Water/aquatic creatures?
+

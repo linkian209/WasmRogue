@@ -1,0 +1,142 @@
+#!/bin/bash
+#
+# Frontend for C-Like microScripting System
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+
+my_exec="$0"
+my_path=`echo "$my_exec" |sed -e 's/\/[^\/]*$//'`
+assembler="${my_path}/assembler/cluss_asm"
+assembler_opts=""
+compiler="${my_path}/mibic/mkdat"
+compiler_opts="-O -g -i -P cat -a"
+
+input_file=""
+output_file=""
+output_format=""
+preprocess_only=0
+
+#
+# Parse arguments
+#
+while [ $# -gt 0 ]
+do
+	case $1
+	in
+		-h|--help)
+			echo "\
+Usage: $my_exec [-hvE] [-f format] [-o output] input
+  -e              use reverse-endian format
+  -E              preprocess only (don't compile)
+  -h, --help      print help text
+  -V, --version   print version information
+"
+			exit 0
+			;;
+		-V|--version)
+			echo "\
+C-Like Microscripting System
+This program is free software, distributed under the GNU General Public
+License. See the source for details."
+			exit 0
+			;;
+		-e)
+			if [ "$output_format" != "" ]; then
+				echo "Only one output format at a time is allowed." 1>&2
+				exit 1
+			fi
+			output_format="reverse"
+			;;
+		-f|--format)
+			if [ "$output_format" != "" ]; then
+				echo "Only one output format at a time is allowed." 1>&2
+				exit 1
+			fi
+			shift
+			output_format="$1"
+			;;
+		-o) # Output
+			if [ "$output_file" != "" ]; then
+				echo "Only one output file at a time is allowed." 1>&2
+				exit 1
+			fi
+			shift
+			output_file="$1"
+			;;
+		-E)
+			preprocess_only=1
+			;;
+		-*)
+			echo "Unrecognized option: $1"
+			exit 1
+			;;
+		* ) # Input
+			if [ "$input_file" != "" ]; then
+				echo "Only one input file at a time is allowed." 1>&2
+				echo "(Input files were $input_file and $1.)" 1>&2
+				exit 1
+			fi
+			input_file="$1"
+			;;
+	esac
+	
+	shift
+done
+
+#
+# Check that required data was supplied
+#
+if [ "$input_file" == "" ]; then
+	echo "You must specify an input file." 1>&2
+	exit 1
+fi
+if [ "$output_file" == "" ]; then
+	echo "You must specify an output file." 1>&2
+	exit 1
+fi
+if [ "$output_format" == "" ]; then
+	output_format="native"
+fi
+
+#
+# Check for special non-compilation modes
+#
+if [ "$preprocess_only" -eq 1 ]; then
+	# No preprocessing done, in this version
+	cp "$input_file" "$output_file"
+	exit 0
+fi
+
+#
+# Check for the availability of supporting programs
+#
+if [ ! -x "$compiler" ]; then
+	echo "frontend: I can't access my compiler!" 1>&2
+	exit 2
+fi
+if [ ! -x "$assembler" ]; then
+	echo "frontend: I can't access my assembler!" 1>&2
+	exit 2
+fi
+
+#
+# Compile.
+#
+tmpname="tmp$$.s"
+${compiler} ${compiler_opts} "$input_file" -o "$tmpname"
+${assembler} ${assembler_opts} -f "$output_format" -o "$output_file" "$tmpname"
+rm $tmpname
+

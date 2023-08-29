@@ -1,0 +1,121 @@
+source cproto -DCPROTO -DTARGET=T_CPROTO -Iinclude -Isrc -Isys/stub -Iauto src/*.c sys/stub/*.c
+
+##
+## Files using main-program's prototypes
+##
+
+
+mark SEG(0) actions_menu monstmove webspinner_build webspinner_cower monst_chat call_stepfunc call_genericfunc call_throwhitfunc call_usefunc call_attackfunc construct_coord construct_rect construct_direction construct_range initialize resize_map_store eventloop die end_game quit cleanup call_generic get_option set_option save_options
+mark SEG(1) timepass UI_Status_Place full_redraw draw draw_all_tiles draw_tile facing facing_towards facing_opposite player_facing delta_facing link_data_file save_game restore_game save_level load_level cleanup_save compress_tiles fhuffmaninit_write fhuffmanputc fhuffmanflush fhuffmaninit_read fhuffmangetc run_program interpret_call filter_none filter_cursed filter_worn filter_wearable filter_unidentified filter_usable save_to_file
+mark SEG(2) filter_enchantable filter_plural filter_rusty pick_item pick_multiple filter_matches init_inventory split_item merge_item give_item give_item_slip player_equipment count_inventory iterate_item_property get_item_property apply_item_property apply_all_item_properties shortitemname n_itemname itemname award_item_points rust_inventory fix_rust give_gold player_gold debit_gold item_cost sale_price list_discoveries init_discoveries identify_type type_is_identified compress_items place_item draw_item count_items top_item color_item init_items cleanup_items randitem drop_item drop_multiple wear_item wear_multiple takeoff_item takeoff_multiple item_step pickup hotkey_item calc_light tracevision monst_anger
+mark SEG(3) illuminate attack_tile identify entangle confuse hallucinate paralyze engulf_in_darkness numb detect_invisible removecurses enchant_item message vmessage UI_MF_clear UI_MF_history UI_MF_sendmsg UI_MF_wait gen_map mkmap_big_front base_coat place_room place_hole make_noise cave_pass cb_cave_partial cave_partial_gen cb_cave cave_generation place_corridors fill_room place_doors make_door place_items make_connections place_player_on_map monstcanmove monst_is_aligned_with_plr monstbytile compress_monsters place_monster monstname player_can_see calculate_hit monst_facing monst_hit_plr monst_hit_monst monst_attack_type addrandommonst addmonster addmonster_ptr monst_remove monst_takedamage save_checkpoint goto_level
+mark SEG(4) monst_heal monstmoveto monst_detect_player monst_can_attack_player monstmoverandomly monstmovetowardsplayer monstmoveawayfromplayer monst_is_peaceful monst_is_pet scare_monster scare_monster_force confuse_monster gather_wandering_monsters place_wandering_monsters options_menu pet_move monst_swing_monst monst_attack_monst monst_battle_pet plr_attack_monster_roll init_player apply_stat_mod_desc update_player enter_map follow_connection plr_move place_player_randomly plr_mod_stat plr_restore_stat plr_moveto plr_search char_info prompt prompt_dir xrandom rrandom nrandom lsrand lrand feed_entropy checksum_bytes frleverify frlewrite add_dead_zone clear_dead_space levelfile_name UI_MF_Place isNull
+mark SEG(5) frleread frleinit frleinit_read frleinit_write frleinit_write_nochecksum frlefinalize frleflush frleputc rlegetc rle_set_source load_options display_scores award_high_score init_skills award_mark weapon_skill_attack weapon_skill_damage print_skills study_book init_spells cast_spell throw_item_from_menu throw_readied_item UI_TF_MoveCamera UI_TF_PlaceCamera UI_TF_Scroll UI_TF_Init UI_TF_Place UI_TF_Deinit UI_TF_PutTile UI_TF_PutTile_Color UI_TF_FullRedraw UI_TF_PlaceCursor UI_TF_DrawEffect UI_TF_ClearEffects init_timers apply_timers remove_expired_timers add_timer use_item catprintf retprintf vretprintf trace_path pluralize indefinite_article find_monster_description init_shuffle_tab deref_file_ptr plr_step
+mark SEG(6) deref_file_ptr_partial display_title_screen init_layout sys_init sys_init_data_file sys_cleanup UI_Menu_Set_Persist UI_Menu_Pick read_char delay Graph_ClrScr Graph_DrawChar Graph_DrawStr Graph_ClearRect UI_Dialog_Default UI_Dialog_Display FontHeight FontWidth panic get_keyname display_title_screen init_layout sys_init sys_init_data_file sys_cleanup UI_Menu_Set_Persist UI_Menu_Pick read_char delay Graph_ClrScr Graph_DrawChar Graph_DrawStr Graph_ClearRect UI_Dialog_Default UI_Dialog_Display FontHeight FontWidth panic get_keyname display_title_screen init_layout sys_init sys_init_data_file sys_cleanup UI_Menu_Set_Persist UI_Menu_Pick read_char delay Graph_ClrScr Graph_DrawChar Graph_DrawStr Graph_ClearRect UI_Dialog_Default UI_Dialog_Display FontHeight FontWidth panic get_keyname fire_dir count_options count_choices Graph_DrawTile key_pending
+
+file auto/proto.h
+emit_prototypes
+
+export timepass full_redraw draw_tile give_item itemname identify_type isNull
+export place_item top_item randitem illuminate message make_door monstbytile
+export monstname addmonster monst_takedamage monst_heal monst_is_peaceful
+export scare_monster scare_monster_force confuse_monster apply_stat_mod_desc
+export update_player follow_connection place_player_randomly get_option
+export plr_mod_stat plr_restore_stat prompt prompt_dir xrandom nrandom lrand
+export UI_TF_DrawEffect UI_TF_ClearEffects add_timer retprintf trace_path
+export find_monster_description deref_file_ptr deref_file_ptr_partial
+export UI_Menu_Set_Persist UI_Menu_Pick UI_Dialog_Default UI_Dialog_Display
+export delay read_char Graph_DrawChar Graph_DrawStr Graph_ClearRect FontHeight
+export FontWidth get_keyname call_generic Graph_ClrScr goto_level
+
+prune
+
+file auto/dll_import.c
+echo /* Generated file - do not edit */
+echo \#include "crogue.h"
+echo ECONST import_functions body_functions =
+echo     {
+emit_format %n,
+echo     NULL
+echo     };
+
+file auto/dll_import.h
+echo /* Generated file - do not edit */
+echo typedef struct
+echo {
+emit_format %r(*%n)%a;
+echo     void *terminator;
+echo } import_functions;
+
+file auto/import.h
+echo /* Generated file - do not edit */
+emit_defines dll_body_functions
+
+##
+## Files using dll's prototypes
+##
+clear
+source cproto -DCPROTO -DTARGET=T_CPROTO -Iinclude -Iauto -Isys/stub -Idll dll/*.c
+
+mark SEG(7) mkmap_big debug no_op tool_holysymbol spell_shield spell_confusion spell_gain_strength spell_heal spell_adrenaline spell_adrenaline_low spell_adrenaline_expire spell_adrenaline_high_effect spell_adrenaline_low_effect read_tutorial_sign auto_follow_connection force_follow_connection dll_fill_room clear_string setTabStops draw_string help
+
+file auto/dllproto.h
+emit_prototypes
+
+export tool_holysymbol spell_shield
+export spell_confusion spell_gain_strength spell_heal spell_adrenaline
+export read_tutorial_sign auto_follow_connection force_follow_connection
+export help debug clear_string setTabStops draw_string mkmap_big dll_fill_room
+
+prune
+
+file auto/dll_export.c
+echo /* Generated file - do not edit */
+echo \#include "crogue.h"
+echo \#include "dll.h"
+echo ECONST export_functions dll_exports =
+echo     {
+echo     no_op,
+emit_format %n,
+echo     NULL
+echo     };
+
+file auto/dll_export.h
+echo /* Generated file - do not edit */
+echo typedef struct export_functions
+echo {
+echo     void (*no_op)(void); // Fill slot 0 (null)
+emit_format %r(*%n)%a;
+echo     void *terminator;
+echo } export_functions;
+
+file auto/export.h
+echo /* Generated file - do not edit */
+emit_defines w->dll_interface
+
+file auto/data_import.m4h
+echo /* Generated file - do not edit */
+emit_as_macro DLL_EXPORT
+
+##
+## Files using data prototypes
+##
+clear
+source cat data/exports.h
+
+file auto/data_export.h
+echo /* Generated file - do not edit */
+echo \#define arg0()
+echo \#define arg1(a) ,(long)a
+echo \#define arg2(a,b) ,(long)a,(long)b
+echo \#define arg3(a,b,c) ,(long)a,(long)b,(long)c
+echo \#define arg4(a,b,c,d) ,(long)a,(long)b,(long)c,(long)d
+echo \#define arg5(a,b,c,d,e) ,(long)a,(long)b,(long)c,(long)d,(long)e
+emit_format \#define %n(%S) call_generic(%i, %c arg%c(%S))
+
+file auto/data_export.m4
+echo /* Generated file - do not edit */
+echo m4_divert(SEQUENCE_TABLES)
+echo export FUNCTIONSTABLE;
+emit_format link: %n;
+

@@ -1,0 +1,103 @@
+
+ifeq ($(BUILD_VERBOSE),1)
+	Q :=
+	echo := @true
+else
+	Q := @
+	echo := @echo
+endif
+export Q echo
+
+export CPP DATPP LEX YACC DEL BITBUCKET MOVE COPY MKDIR
+
+CFILES = $(wildcard src/*.c) auto/dll_import.c
+DLL_CFILES = $(wildcard dll/*.c) auto/dll_export.c
+HFILES_BILINGUAL=$(wildcard include/struct_*.h)
+HFILES = $(wildcard include/*.h)
+DATFILES = $(wildcard data/*.m4 data/*.m4h data/*.dat)
+
+INCLUDEPATH = include src dll auto
+
+DATPPOPTS_CALC := -P -Idata -Iinclude -DIS_CALCULATOR
+DATPPOPTS_PALM := -P -Idata -Iinclude -DIS_PALM -DPALMOS
+DATPPOPTS_PC := -P -DREALCOMPUTER
+
+CPPOPTS_CALC := -Idata -Iinclude -Iauto -nostdinc -DIS_CALCULATOR
+CPPOPTS_PC   := -Idata -Iinclude -Iauto -nostdinc -DSUPPORT_COLOR \
+                -DREALCOMPUTER
+CPPOPTS_PALM := -Idata -Iinclude -Iauto -nostdinc -DPALMOS -DIS_PALM \
+                -DSUPPORT_COLOR
+
+all:
+
+clean :
+	$(echo) "  CLEAN"
+	$(Q)$(DEL) \
+	       *.89z *.89y *.9xz *.9xy \
+	       *.tmp *.o *.obj *.s *.exe *.med *.pdb \
+	       tools/*.exe tools/*.ilk tools/*.pdb \
+	       gamedat.med.ti gamedat.med.pc gamedat.out.ti gamedat.out.pc \
+           *.ld gamedat.med.palm gamedat.out.palm gamedat.dat *.prc \
+	       $(OBJDIR_PC)/*.pdb *.i *.bin *.grc \
+	       tools/fixedmap.exe \
+	       gamedat.palm.rcp *.dat
+	$(Q)cd tools/mki && $(MAKE) --no-print-directory clean
+	$(Q)cd tools/cluss && $(MAKE) --no-print-directory clean
+
+tidy: clean
+	$(echo) "  TIDY"
+	$(Q)$(DEL) $(OBJDIR_PC)/*.dat $(OBJDIR_PC)/*.exe $(OBJDIR_LINUX)/crogue \
+	       $(OBJDIR_LINUX)/*.dat $(OBJDIR_89)/crog*.89? $(OBJDIR_92P)/*.9x? \
+	       $(OBJDIR_V200)/*.v2? $(OBJDIR_PALM)/*.prc $(OBJDIR_WIN)/rgscores
+
+distclean: clean
+	$(Q)$(DEL) auto/configure.mk Makefile
+	$(Q)$(MAKE) -C tools/sgt --no-print-directory clean
+
+##
+## Files for all targets
+##
+MKDAT     := tools/cluss/cluss
+MKDATOPTS := 
+
+vpath %.h include auto
+vpath %.c src dll auto
+
+$(MKDAT) :
+	$(echo) "  >>>  tools/cluss"
+	$(Q)$(MAKE) --no-print-directory -C tools/cluss
+	$(echo) "  <<<"
+
+gamedat.med.ti: data/gamedat.m4 $(DATFILES) tools/fixedmap.exe
+	$(echo) "  PP  " $@
+	$(Q)$(CPP) $(CPPOPTS_CALC) $< |$(DATPP) $(DATPPOPTS_CALC) >$@
+gamedat.med.palm: data/gamedat.m4 $(DATFILES) tools/fixedmap.exe
+	$(echo) "  PP  " $@
+	$(Q)$(CPP) $(CPPOPTS_PALM) $< |$(DATPP) $(DATPPOPTS_PALM) >$@
+gamedat.med.pc : data/gamedat.m4 $(DATFILES) tools/fixedmap.exe
+	$(echo) "  PP  " $@
+	$(Q)$(CPP) $(CPPOPTS_PC) $< |$(DATPP) $(DATPPOPTS_PC) >$@
+
+tools/fixedmap.exe : src/huffman.c src/rle.c tools/fixedmap.c
+	$(echo) "  CC  " $^
+	$(Q)$(PC_CC) src/huffman.c src/rle.c tools/fixedmap.c $(PC_CC_OPTS_TOOL) -o $@
+
+auto/automatic.h : $(OBJDIR_PC)/crogdat.dat
+
+tools/mki/mki:
+	$(echo) "  >>>  tools/mki"
+	$(Q)$(MAKE) -C tools/mki --no-print-directory
+	$(echo) "  <<<"
+
+proto: Interface tools/mki/mki
+	$(echo) "  PROTO"
+	$(Q)tools/mki/mki -v $<
+
+#
+# Misc
+#
+all: ../readme.txt
+../readme.txt : notes/readme.txt CHANGELOG
+	$(echo) "  Generating readme"
+	$(Q)$(DATPP) -I. "-DCROGUE_VERSION=$(VERSION)" notes/readme.txt >../readme.txt
+

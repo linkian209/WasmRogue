@@ -1,0 +1,22 @@
+/* Generated file - do not edit */
+/* dll/bigmap.c */
+#define mkmap_big (w->dll_interface->mkmap_big)
+/* dll/debug.c */
+#define debug (w->dll_interface->debug)
+/* dll/dll.c */
+#define tool_holysymbol (w->dll_interface->tool_holysymbol)
+#define spell_shield (w->dll_interface->spell_shield)
+#define spell_confusion (w->dll_interface->spell_confusion)
+#define spell_gain_strength (w->dll_interface->spell_gain_strength)
+#define spell_heal (w->dll_interface->spell_heal)
+#define spell_adrenaline (w->dll_interface->spell_adrenaline)
+#define read_tutorial_sign (w->dll_interface->read_tutorial_sign)
+#define auto_follow_connection (w->dll_interface->auto_follow_connection)
+#define force_follow_connection (w->dll_interface->force_follow_connection)
+#define dll_fill_room (w->dll_interface->dll_fill_room)
+/* dll/drawstring.c */
+#define clear_string (w->dll_interface->clear_string)
+#define setTabStops (w->dll_interface->setTabStops)
+#define draw_string (w->dll_interface->draw_string)
+/* dll/help.c */
+#define help (w->dll_interface->help)

@@ -1,0 +1,33 @@
+Spellcasting creatures
+	Dark wizard
+		3: Summon skeleton, magic bolt, teleport, invisibility, stun
+	Wind mage
+		3: Windblast, summon air elemental, invisibility
+	Fire mage
+		2: Summon fire elemental, fireball
+	Lich:
+		3: Summon skeletons, summon mummy, magic bolt, energy drain, stun
+		3: Teleport
+		1: fireball
+	Demilich:
+		5: summon mummy, magic bolt, energy drain, stun
+		4: Teleport
+		2: Fireball, summon fire elemental
+
+Creature spells
+	Preparatory
+		Summon skeletons: Creates two hostile skeletons
+		Summon mummy: Creates a hostile mummy
+		Summon fire elemental: Creates a hostile fire elemental
+		Invisibility: become invisible for 25 rounds
+		Stun: confuse player for 2-6 rounds
+	Aligned
+		Magic bolt: 7-15 damage
+		Fireball: 22-31 damage, radius 1
+		Windblast: 5-10 damage, move back 3 tiles, take 10*(3-d) damage for hitting a wall
+	Melee
+		Energy drain
+	Defensive
+		Heal
+		Teleport
+

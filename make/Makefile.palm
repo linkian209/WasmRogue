@@ -1,0 +1,49 @@
+
+PALMLIBS := -lPalmOSGlue
+PALM_CC_OPTS += -DTARGET=T_PALMOS -Wall
+PALM_APPID := cRog
+
+##############################################################################
+# Nothing beyond this line should need to be changed                         #
+##############################################################################
+
+PALM_CC_OPTS += $(addprefix -I, $(INCLUDEPATH) sys/palm)
+PALM_CC_OPTS += -DTARGET_LANGUAGE=$(LANGUAGE) -O2
+
+PALM_CFILES := $(CFILES) $(DLL_CFILES) $(wildcard sys/palm/*.c)
+PALM_HFILES := $(HFILES) $(wildcard sys/palm/*.h)
+
+$(OBJDIR_PALM):
+	$(MKDIR) $(OBJDIR_PALM)
+
+palm: $(OBJDIR_PALM)/calcrogue.prc
+all: palm
+
+PALM_OBJECTS := $(foreach file, $(PALM_CFILES), $(basename $(notdir $(file))).palm.o)
+
+%.palm.o: %.c
+	$(echo) "  CC  " $<
+	$(Q) $(PALM_CC) $(PALM_CC_OPTS) -o $@ -c $<
+%.palm.o: sys/palm/%.c
+	$(echo) "  CC  " $<
+	$(Q) $(PALM_CC) $(PALM_CC_OPTS) -o $@ -c $<
+
+$(OBJDIR_PALM)/calcrogue.prc: calcrogue.palm.med resources
+	$(echo) "  PRC " $<
+	$(Q) $(PALM_BUILDPRC) -o $@ sys/palm/seg.def $< *.bin
+
+calcrogue.palm.med: $(PALM_OBJECTS) seg-sections.ld seg-sections.s
+	$(echo) "  LD  " $@
+	$(Q) $(PALM_LD) -T text_64k -o $@ $^ $(PALMLIBS)
+resources: sys/palm/resource.rcp sys/palm/resource.h gamedat.palm.rcp
+	$(echo) "  RSC " $@
+	$(Q) $(PALM_PILRC) -q -I sys/palm $< .
+
+seg-sections.ld seg-sections.s: sys/palm/seg.def
+	$(echo) "  SEG " $<
+	$(Q) $(PALM_MULTIGEN) $<
+
+gamedat.palm.rcp: gamedat.med.palm $(MKDAT)
+	$(echo) "  MKD " $<
+	$(Q) $(SGT) -o gamedat.palm $(MKDAT) $(MKDATOPTS) -f palmos $<
+

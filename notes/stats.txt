@@ -1,0 +1,24 @@
+Basic stats:
+  Strength (St)
+  Dexterity (Dx)
+  Toughness (To)
+  Mana (Mn)
+  Willpower (Wi)
+
+Modifications:
+
+Poison: -1 St
+Disease: -1 To
+  
+Less than 1/4 mana, spells cast:
+  "You are exhausted, but your magical ability has improved.". +1 Mn, -1 Wi
+Less than 1/4 hp:
+  "You have abused your health, but your resolve is strengthened." +1 Wi, -1 To
+Full hp, no use of regeneration, 125 attacks:
+  "All this fighting has toughened you up." +1 To
+Firing missiles, successful evasion
+  "Your movements are swifter and more precise." +1 Dx
+Resting, no spells cast:
+  "You feel well rested." Restore Wi +1
+
+

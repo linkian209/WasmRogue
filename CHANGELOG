@@ -1,0 +1,484 @@
+Beta 6c
+ Features
+  - Finished the tower quest, for wizards and necromancers. No spoilers in this
+    changelog, but it involves lots of cool stuff.
+  - Checkpoint saves. A backup saved game is automatically made whenever you
+    move to a new level, and restored if the game crashes.
+ Bug fixes
+  - (PalmOS) Fixed a stack overflow in the bytecode interpretter which caused
+    crashes all over the place.
+  - (PalmOS) Fixed infinite prompt loop when running into a peaceful creature
+  - Fixed missing exit from tower area
+  - Fixed bug which could cause disconnected areas with the big-map generator
+  - Monsters won't be generated in the wilderness area
+  - Fixed bug that allowed duplicating items
+  - It is no longer possible to throw equipped non-missile weapons
+ Misc
+  - Balance changes to make the necromancer stronger
+
+Beta 6b SP1
+ Features
+  - New high-density tileset for Palm
+ Bug fixes
+  - Fixed a bug in the bytecode interpretter which caused crashing around the
+    Wind Mage's spells
+  - (PC, calc) Fixed crash when starting tutorial
+  - (Palm) PgUp/PgDn no longer give an extraneous error message on Tungstens
+  - (PC) The 'use color' option now works correctly.
+  - Fixed pluralization of "you see a [item] here"
+ Misc
+  - Crashes due to corrupt saved games should no longer require a reinstall
+    after resetting.
+  - Added check to make sure saved games are from the same version.
+  - Tweaked color brightnesses
+
+Beta 6b
+ Features
+  - Added configuration for hard buttons and pen strokes on PalmOS
+  - Added color support on PalmOS
+  - Added class-specific quest for fighters
+  - Added 'invert display' option on PalmOS
+  - Rewrote much of the data file compiler. The external data file is no longer
+    limited to 64k, and calling into the data file is simpler
+ Bug fixes
+  - (Palm) Fixed bug which would leave behind a corrupt save file when ending
+    the game in a way other than dying.
+  - Fixed screen not being redrawn after a dialog is shown
+  - (Palm) Switch video mode on devices which default to monochrome
+  - Fixed bridge troll not becoming active when attacked
+  - Fixed enter-map event triggering on save/restore
+  - Fixed save file cleanup on Unixlike systems
+  - Fixed key names not showing in Windows version
+  - Fixed buffer overrun in high-score keeping
+ Misc
+  - Item descriptions are now "(+N stat)" instead of "(N stat)"
+  - New PalmOS icons by Don Harned
+  - No more TIGCC tools suite dependency
+
+Beta 6a SP1
+ Features
+  - Configure script for easier compilation and better portability
+ Bug fixes
+  - Fixed version tag
+  - Compiled with an up-to-date TIGCC
+  - Added check for HW3patch before running
+  - Fixed directional prompts on PalmOS
+
+Beta 6a
+ Features
+  - Preliminary PalmOS port!
+  - Czech language, translated by Thomas Navara.
+  - Now producing V200 binaries
+  - Added a medium-size font
+  - Added help option to the main menu
+ Misc
+  - CalcRogue is now internationalizeable, meaning it can (and will be!)
+    translated into more languages.
+  - Started using Doxygen for documentation. Cleaned up some things, and added
+    a *lot* of comments. Should be somewhat easier to figure out what's what.
+  - Re-did the build system. It now supports internationalization and is neater
+    and easier to configure.
+ Bug fixes
+  - Necromancers no longer gain mana with Summon Mummy/Summon Wraith
+  - Fixed crash when a pet killed a shopkeeper
+  - Fixed improper lighting at the edge of vision and when teleporting
+  - Clearing of unused interface space is more reliable
+  - Monsters are no longer drawn hidden in advance of the level
+  - Fixed crash with thrown potions
+  - Fixed crash when cancelling in multi-action menus
+  - Fixed crash when opening the options menu from the main menu
+
+Gamma 5 (Death of a Travelling Salesman)
+ Features
+  - Added some consistency checks and debugging code for the prereleases
+  - Map size is no longer fixed
+  - New map generator for levels 3 and D:15
+  - Changed the map generation method for the forest
+ Bug fixes
+  - Displacing a pet no longer gives a free move
+  - Giant spider AI is no longer hyperactive
+  - Fixed crash with 'detect invisible' spell
+  - Items which shouldn't stack no longer do so when dropped
+  - Fixed a garbled message when attacked from behind
+  - Fixed a bug which caused crashes when bringing along a monster between
+    levels with certain debug settings enabled
+
+Beta 5d (Bestiary)
+ Features
+  - Rewrote monster AI system
+  - Monster vs monster combat is more consistent with player vs monster
+  - New item: crystal dagger
+  - New monsters: Fire elemental, giant slug, grue, vortex
+  - New monsters: Dark wizard, Fire mage, Wind mage
+  - Shops now reveal the function of for-sale items
+  - New quest in dwarftown
+  - Two new fountain effects
+  - Improved speed of saving/restoring
+  - (PC port) Fancier menus
+ Misc
+  - Cleaned up the Linux port. It now uses gzip for saved games, because of
+    issues with the built-in compressor.
+  - Changed calculation of item purchase and sale prices
+  - Changed default for 'archive saves' to off.
+  - Potions of gain stat now also restore that stat
+  - Enchanting an amulet of speed now affects dexterity, not speed
+  - Changed non-grayscale representation of unexplored areas to be easier on LCD
+ Bug fixes
+  - Worked around a crash-on-exit problem by switching to an older TIGCC
+  - Gauntlets of power no longer cause a crash when worn
+  - Wearing one fueled item no longer causes others in your inventory to drain
+  - Maximum HP determination is now the same at initialization and update
+  - Items in city shops are properly marked as unpaid
+  - Giant spiders won't erroneously attack other monsters
+  - Changes in lighting take effect immediately
+
+Beta 5c (Population Growth)
+ Features
+  - New items: boots of ice, pick-axe, helm of seeing, helm of delusion, wand
+    of teleportation, plain ring, ring of teleportation, ring of time dilation,
+    cloak of invulnerability
+  - New spellbook: book of magical repairs (mend bone, repair zombie, repair
+    mummy, shadow healing)
+  - New quest: kill the bridge troll
+  - Added a stable to the city
+  - Added smiths to fix rusted items
+  - Spells are now forgotten with time, and spellbooks fade
+  - Confusion now prevents using certain items
+  - Changed the way item draining is handled
+  - Equipping items is more descriptive
+  - Added a shop to minetown
+  - Added notifications when a torch is running low
+  - Drastically improved speed in fully-lit areas
+  - Added townfolk
+ Bug fixes
+  - Fixed a crashing bug with spells cast over the map edge of town or forest
+  - The over-world is now a no-teleport zone
+  - Spell component information is now given correctly
+  - Fixed a bug which would cause monsters to be duplicated when saving/
+    restoring levels
+ Misc
+  - Decreased hunger rate
+  - You can no longer eat when not hungry
+
+Beta 5b (Brave New World)
+ Features
+  - Redesigned the dungeon and added a wilderness area, towns and NPCs
+  - New classes: priest, necromancer
+  - Switched to Angband-style spellbooks
+  - New spells: blink, detect invisible, purify, divine aid, create skeleton,
+    create zombie, create wraith
+  - New items: book of basic spells, book of life spells, book of channeling
+    spells, book of miscellaneous spells, book of weaponry, book of basic
+	prayers, book of blessings, book of animation, book of gemology
+  - The bottle is now saved when quaffing potions, and can be filled at a
+    fountain
+  - Added some additional effects for fountains
+  - Monsters now follow you through stairs
+ Bug fixes
+  - Worked around interpreter speed issues caused by a compiler bug
+  - Expiration of 'gain strength' shouldn't give message thrice
+  - Cause of death is no longer sometimes replaced by score file path
+  - Randomly-generated torches have as much charge as they're supposed to now
+  - Windows port no longer crashes when killing certain creatures with magic
+
+Beta 5a (Cursed Fickle -5 Deadline [0,0])
+ Features
+  - Introduced bytecode interpreter and moved some functions from the DLL into
+    the data file
+  - Replaced the 'mkdat' tool with a full-fledged compiler
+  - Some spells now have additional requirements for casting
+  - Added 'options' to main menu
+  - New items: cross (repels vampires), torch, rattlesnake tooth (component
+    for 'scare monster' spell)
+  - Added some uses for the willpower stat
+  - Added fountains
+  - Version number is now displayed on the title screen
+  - Quicksave key now restores the screen immediately
+  - 'Gain strength' now affects toughness and willpower, and lasts longer.
+  - Attacking a shopkeeper now allows taking items for free
+  - New monster: giant rat
+  - Added support for shared score files on unix
+ Bug fixes
+  - Fixed throwing of charged items
+  - Disabled Huffman on PC port to work around save game corruption
+  - Fixed an overrun problem in message logging which caused crashing
+  - Monsters generated in groups no longer overlap
+  - Fixed effect delays under unix systems
+  - Wands of digging break down secret doors and spider webs
+  - Unix uses usleep instead of terminal delay
+ Misc
+  - Enchanted arrows break less
+  - Refactored map descriptions data structure
+  - Switched 'numbness' from a spell to a potion
+  - Leprechauns sometimes drop gold when killed
+  - Blank scrolls don't disappear
+
+Gamma 4
+ Features
+  - Added huffman compression for smaller savefiles
+  - Added message history
+  - Added an option to disable grayscale
+  - Added options to disable archiving of saves and scores
+ Bug fixes
+  - Autopickup message when pack is full now names the item
+  - Fixed bug in skill system which caused leveling problems in 4b and 4c
+  - Fixed identify lists not including everything they should
+
+Beta 4c
+ Bug fixes
+  - Fixed a bug in the data file handling which corrupted the ruined town level
+  - Fixed stairs on ruined town level
+  - Fixed weapon skills with missile launchers
+  - Switched back to gcc 3.2 (just in case)
+  - Prevent having stacks of 0 gold
+  - Fixed a bug which would cause the inventory to incorrectly register as
+    empty
+  - Fixed an integer overflow which would cause gaining levels too rapidly
+  - Improved handling of low storage conditions
+
+Beta 4b
+ Features
+  - Added weapon skills
+  - New spells: adrenaline, numbness
+  - New item: scroll of enchanting
+  - Items on the floor stack together
+  - Open/close commands don't prompt when there's only one possibility
+  - Options are now saved in saved games and in the score file
+  - Monsters are now able to open doors
+  - Added 'ruined town' level at level 10
+  - Daggers are more effective when thrown
+  - Rearranged packaging into one (big) file
+ Bug fixes
+  - Fixed an obscure case when selling with a full inventory
+  - You are no longer able to close a blocked door
+  - Items that shouldn't be considered unidentified no longer show up on ID
+    menus
+
+Beta 4a (Multi-Polymorphic-Variable Calculus)
+ Features
+  - Implemented inventory and spell hotkeys
+  - Implicit facing
+  - Added autopickup option
+  - Added auto-follow option
+  - Added tile size option
+  - Added font size option for messages and status line
+  - New item: wand of fire
+  - Save and level files now have checksums
+  - Improved the quality of random number generation
+  - Spellbook reading can now be interrupted
+  - Scroll of identify now identifies multiple items
+  - Added high score option to main menu
+
+Gamma 3 (You Only Segfault Twice)
+ Features
+  - Spiders build and use webs more intelligently
+  - You now have a chance to evade known traps
+  - Added a delay to graphical effects and added a hit effect
+  - Confusion now prevents spellcasting
+ Bug fixes
+  - Fixed a bug which caused crashing on exit
+  - Fixed a major bug when restoring games
+  - Fixed a bug which would cause a crash when updating the high scores
+  - Fixed a bug with DLL loading when restoring games
+  - Fixed a bug which would cause webs and timed spells to stop working
+  - Fixed a bug which caused saved levels to not be archived
+  - The confusion spell no longer affects null (deleted) monsters
+  - (Unix) Ncurses no longer waits on ESC keypress
+
+Beta 3e (Making Things Impossible Again)
+ Features
+  - New monsters: dragon, giant spider
+  - Jackals and killer bees are now generated in groups
+  - New item: scroll of create monsters
+  - (PC) Items are colored according to description
+  - Various balance changes
+ Bug fixes
+  - Fixed a major bug in level saving/restoring introduced in beta 3d
+  - The actions menu and tutorial text now reflects keybindings for platforms
+    other than TI-89
+  - The actions menu no longer clobbers the screen when cancelled
+  - Moved the Amulet into its proper category
+  - Stat drain can no longer reduce stats below 1
+  - Non-fragile, non-ammo items no longer break when thrown
+  - (PC) Traps are no longer revealed by color
+
+Beta 3d (A Curse Upon Curses)
+ Features
+  - (PC) Switched library to PDCurses for MSC
+  - (PC) Added color support
+  - (PC) Running now uses proper keys
+  - (PC) Cursor now appears on top of player
+ Bug fixes
+  - Improved handling when running out of archive memory
+  - Improved error output when loading DLLs
+  - Improved fault-tolerance when loading DLLs
+  - Fixed cleanup in an obscure out-of-memory case
+
+Beta 3c (Down the Dumb)
+ Features
+  - Added a tutorial level
+  - Many balance changes
+  - Improved speed of inventory menus
+  - New traps: pit trap, flame trap
+  - New item: the Amulet of Yendor
+  - Wands of detection now grant see invisible
+  - Pressing a key now interrupts running
+  - Improved handling of out-of-memory conditions
+ User interface changes
+  - Added a warning when arrow keys are first action
+  - Right-arrow is now also select in menus
+  - Bows are now more visually distinct from stairs
+ Bug fixes
+  - Fixed a memory leak
+  - Vampire's draining attack is no longer undone by player_update()
+  - Teleporting left the target tile in a strange state
+  - You can no longer sell gold
+
+Beta 3b
+ Features
+  - Moved item/spell functions into a DLL
+  - Added a graphical effect for beam spells
+  - New items: wand of lightning
+  - New spells: lightning, heal
+  - New monsters: jackal, snake
+  - Gold and gems now add to score.
+  - Added auto-follow-stairs
+  - Added actions menu
+  - Rewrote to-hit formula
+ Bug fixes
+  - Fixed a crash bug by updating to TIGCC v0.94 SP3
+  - Fixed gain strength spell
+
+Beta 3a (Balance by Breaking the Scale In Half)
+ Features
+  - Implemented shops
+  - Switched to a different attribute distribution system
+  - Use of the debug menu prevents getting a high score
+  - Implemented compression on main save file
+  - New monsters: vampire, wraith, leprechaun, shopkeeper
+  - New spells: scare monster, confusion, gain strength
+  - New items: gold pieces, potions of restore ability, amulet of slow
+    digestion, ring of hunger, ring of resist poison
+  - Re-balanced success chances for reading spellbooks
+ Bug fixes
+  - Worked around a TIGCC bug in fopen which would cause crashes when leaving
+    a level
+  - Persistent multi-page menus are now redrawn properly
+  - (PC) Fixed a bug which prevented compilation with MSC or MinGW
+  - Monsters now flee when they ought to
+  - Non-ammunition projectiles work properly again
+
+Gamma 2
+ Features
+  - High scores list records causes of death
+  - Added checksum to deter scorefile editing
+  - New monster: giant ant
+  - Equipping message now shows identified form
+  - Reduced chance for monsters to flee to 50% (per hit)
+ Bug fixes
+  - Multi-selection menus now have selection initialized properly
+  - Items are no longer generated on top of stairs
+  - Fixed a severe bug with status indicator suppression and HW2 grayscale
+
+Beta 2b (Count Your Losses and Occasional Blessing)
+ Features
+  - Added basic high-score keeping functionality
+  - AI is now a FSM. Monsters will flee when at less than 1/4 HP, and regen
+    1 HP/4 rounds while doing so.
+  - Combined all map meta-types into one
+  - New item types: Silver arrow, silver bolt, silver dagger, silver-shod
+    quarterstaff, silver mace, silver longsword, silver axe, bow of accuracy,
+    crossbow of force, gauntlets of power, brass lantern
+  - Added brass lantern to starting inventory for wizards and archers
+  - Implemented running (shift+direction)
+  - Implemented multi-drop command (shift+')'), multi-wear command (shift+'(')
+    and multi-take-off command (shift+'T')
+  - Added screen redraw key (CLR)
+  - Different platforms now have different (correct) information in the
+    quick reference section of the manual
+  - Wrote, rewrote, copied, backed out, re-inserted, and gave up on code for
+    shadowcasting.
+ Bug fixes
+  - Derived extrinsics are now affected by extrinsic modifiers (ie rings of
+     strength affect damage like they should)
+  - Tweaked stat effects for balance
+  - Camera is now positioned correctly when restoring saves
+  - (PC) Multi-page menus now work properly
+  - (PC) Menu displays no longer clobber messages
+  - (PC) Menu displays no longer leave junk on the right edge of the screen
+  - (PC) Adjusted tab stops to be more reasonable for an 80x25 terminal
+
+Beta 2a (Grand Unification)
+ Features
+  - Combined all item meta-types into one
+  - Low-power port is now used to save batteries
+  - APD now works
+  - New items: amulet of brilliance, amulet of speed, amulet of regeneration
+    (replaces ring), amulet of telekinesis, ring of see invisible
+  - New monster: phantom
+
+Gamma 1 (Queue? What Queue?)
+ Features:
+  - Added a discoveries list (access with catalog)
+  - Ported to TI-92+
+  - You can now ready missiles (equip them) and fire with X
+  - Added an archer class
+  - Missiles now break 1/3 of the time
+  - Speed boots now look like regular boots when unidentified
+  - Added ring of damage
+ Bug fixes:
+  - Disabled "soup dungeon" because it takes an inordinately long time to generate
+  - Fixed a bug that prevented rings from being identified when put on
+  - Changed scroll names to [adjective] scroll so they won't be too wide and they'll pluralize properly
+  - Fixed a bug which would destroy items when there was no space in inventory (again)
+  - Items with different flags will no longer stack together
+  - Fixed a number of related bugs which would cause the screen to come up centered on nowhere
+ Compatibility fixes
+  - MSC no longer uses its buggy macros for min and max
+  - No longer pass NULL to conio functions
+
+Beta 1c
+ Features:
+  - Unidentified item descriptions are now shuffled randomly
+  - Pre-generated maps (eg bigroom) are now RLE compressed
+  - Now have three different bigroom variations
+  - Item lists are now filtered based on the action (use the Inventory command for a full list.)
+  - New monsters: Killer bee, Nymph
+  - Randomly 1/5 of all maps are denser, 4/25 of all maps are more chaotic, and 1/25 are caves
+ Bug fixes:
+  - (PC) Picking a non-existant menu item no longer causes a crash
+  - (PC) Ncurses version now recognizes ENTER key
+  - The order in which elements are drawn at startup is now controlled
+  - Entering the same map twice no longer gives a bonus to the score twice
+  - One room can no longer have two room effects
+  - Fixed a serious bug in saving/loading items in levels
+  - Fixed a bug in entering a map from a different source than where you left from
+ Compatibility fixes:
+  - Fixed a typo in machdep.h
+  - Replaced skipWhiteSpace function with std::ws in mkdat.cpp
+  - Implemented WINCOORD as a macro
+
+Beta 1b (Replacing the Rusty Hinges on the Door at the End of the Tunnel)
+ Features:
+  - (Slightly) improved compression
+  - The mines now recombine with the dungeon at bigroom
+  - Item type identifications are now saved
+ Bug fixes:
+  - Made various changes to make MinGW work (but haven't tested)
+  - On AMS 2xx, AlphaLock will be turned off if it was on.
+  - Font no longer changed when garbage collecting memory
+  - Fixed bug which allowed equipping items that shouldn't be equipped
+  - Fixed bug which would mishandle item chains and potentially cause an
+    infinite loop
+  - Rings of regeneration reduced to their proper frequency
+  - Adjusted frequency of item types. Food rations are less common, potions
+    more.
+  - Fixed bug which would cause crash when in Bigroom
+  - Moved bigroom down to level 8, where it should be less deadly
+  - Undocumented the debug menu (F5), because it will not be in the gamma
+    releases.
+  - Light and dark planes on title screen no longer reversed
+  - (PC) No longer generate maps with holes in the borders
+
+Beta 1a (The Door at the End of the Tunnel)
+  First release

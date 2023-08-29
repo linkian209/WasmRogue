@@ -1,0 +1,25 @@
+Potion of healing:
+	Dilute extra healing 1->3 OR
+	Dilute full healing 1->6 OR
+	Crush and dissolve spenseweed in water
+Potion of extra healing
+	Dilute numbness 1->3 and add spenseweed OR
+	Take healing and add spenseweed OR
+	Concentrate healing 3->1 OR
+	Dilute full healing 1->2
+Potion of full healing:
+	Concentrate healing 6->1 OR
+	Concentrate extra healing  2->1
+Potion of sickness:
+Potion of hallucination:
+Potion of confusion:
+Potion of object detection:
+	Crush amethyst and dissolve. Yields 2.
+Potion of numbness:
+Potion of gain strength:
+Potion of gain dexterity:
+Potion of gain toughness:
+Potion of gain mana:
+	Concentrate mana-giving fountain water 3->1
+Potion of gain willpower:
+Potion of restore ability:

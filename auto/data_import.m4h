@@ -1,0 +1,22 @@
+/* Generated file - do not edit */
+/* dll/bigmap.c */
+DLL_EXPORT(mkmap_big, 1)
+/* dll/debug.c */
+DLL_EXPORT(debug, 2)
+/* dll/dll.c */
+DLL_EXPORT(tool_holysymbol, 3)
+DLL_EXPORT(spell_shield, 4)
+DLL_EXPORT(spell_confusion, 5)
+DLL_EXPORT(spell_gain_strength, 6)
+DLL_EXPORT(spell_heal, 7)
+DLL_EXPORT(spell_adrenaline, 8)
+DLL_EXPORT(read_tutorial_sign, 9)
+DLL_EXPORT(auto_follow_connection, 10)
+DLL_EXPORT(force_follow_connection, 11)
+DLL_EXPORT(dll_fill_room, 12)
+/* dll/drawstring.c */
+DLL_EXPORT(clear_string, 13)
+DLL_EXPORT(setTabStops, 14)
+DLL_EXPORT(draw_string, 15)
+/* dll/help.c */
+DLL_EXPORT(help, 16)

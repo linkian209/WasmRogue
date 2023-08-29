@@ -1,0 +1,442 @@
+#!/bin/bash
+
+NULL=/dev/null
+NOTAFILE=A2C46FB2936
+PREFIX=..
+
+OBJDIR_PC=${PREFIX}/binWin
+OBJDIR_89=${PREFIX}/binTI89
+OBJDIR_92P=${PREFIX}/binTI92p
+OBJDIR_V200=${PREFIX}/binV200
+OBJDIR_PALM=${PREFIX}/binPalm
+
+# Target platforms. In case of trouble that only affects one, set the platform
+# to zero to disable it.
+build_ticalc=1
+build_computer=1
+build_palmos=1
+
+
+# Sanity check: make sure functions work
+echo -n "Checking shell functionality... "
+test_sh () {
+	TEST_VAR=123
+}
+test_sh
+if [ ! "$TEST_VAR" -eq 123 ]; then
+	echo "failed."
+	echo "Your shell is not sufficient to run this configure script."
+	exit 1;
+else
+	echo "ok."
+fi
+
+# We now need an easy way to determine whether a program is available on the
+# path. There are three methods to try: the return value of which (known not
+# to work on Cygwin), the output of which (should usually work), and the
+# return value of hash.
+
+check_program_working=0
+echo -n "Checking for which... "
+
+# First method: the return value of which
+if which sh >${NULL} 2>${NULL} && ! which ${NOTAFILE} >${NULL} 2>${NULL}
+then
+	echo "yes"
+	check_program_working=1
+	check_program () {
+		which $1 >${NULL} 2>${NULL}
+	}
+fi
+
+# Second method: the output of which
+if [ $check_program_working != 1 ]; then
+	# It is assumed that sh MUST be on the path, so which will always find it.
+	# This fails if which doesn't exist, or which returns fail searching for
+	# sh.
+	if ! which sh 2>${NULL} >${NULL}; then
+		echo "no"
+	elif [ ! -f "`which sh 2>${NULL}`" ]; then
+		echo "broken"
+	elif [ -f "`which $NOTAFILE 2>${NULL}`" ]; then
+		echo "confused"
+	else
+		echo "yes (no fail state)"
+		check_program () {
+			[ -f "`which "$1" 2>${NULL}`" ]
+		}
+		check_program_working=1
+	fi
+fi
+
+# Third method: the return value of hash
+if [ $check_program_working -ne 1 ]; then
+	echo -n "Checking if hash works... "
+	if ! hash sh >${NULL} 2>${NULL}; then
+		echo "no"
+	elif hash $NOTAFILE >${NULL} 2>${NULL}; then
+		echo "no"
+	else
+		echo "yes"
+		check_program () {
+			hash $1 >${NULL} 2>${NULL}
+		}
+	fi
+fi
+
+if [ $check_program_working -ne 1 ]; then
+	error "No working tool to search the path."
+fi
+
+
+#
+# check_list [command-name] [target-variable] [program-list]
+#
+# Checks for programs in [program-list] in order, storing the first one
+# found in [target-variable]. Also shows "Checking for [command-name]...".
+#
+# If target-variable is already defined, if will be assumed valid and used
+# instead. If none of the choices was present, [target-variable] will be
+# left null and failure returned.
+#
+check_list ()
+{
+	echo -n "Checking for $1... "
+	TARGET_VAR=$2
+	shift; shift
+	while [ $# -gt 0 ]; do
+		if check_program $1; then
+			eval true \${$TARGET_VAR:=$1}
+			break
+		fi
+		shift
+	done
+	if [ ! ${!TARGET_VAR} ]; then
+		echo "no"
+		return 1
+	else
+		eval eval echo "\$\{${TARGET_VAR}\}"
+		return 0
+	fi
+}
+
+#
+# info [text]    Display a message
+# warn [text]    Display a warning
+# error [text]   Display an error and quit
+#
+# If fold(1) is available, the message will be properly line-wrapped.
+# Otherwise, it will wrap wherever the terminal decides to wrap it.
+#
+#
+if check_program fold; then
+	info () {
+		echo "    " "$*" |fold -s -w 79
+	}
+	warn () {
+		echo "    WARNING:" "$*" |fold -s -w 79
+	}
+	error () {
+		echo "ERROR:" "$*" |fold -s -w 79
+	}
+else
+	info () {
+		echo "    " "$*"
+	}
+	warn () {
+		echo "WARNING:" "$*"
+	}
+	error () {
+		echo "ERROR:" "$*"
+	}
+fi
+
+
+
+#
+# Check for necessary basic compilation tools
+#
+if ! check_list "local C compiler" PROG_PC_CC cl gcc cc; then
+	error "A C compiler for the local system is required to compile. Make sure"\
+	      "there is a C compiler available on your path."
+fi
+
+echo -n "Checking target machine... "
+if [ $PROG_PC_CC = "msvc" ] || [ $PROG_PC_CC = "cl" ]; then
+	TARGET_ARCH="msvc"
+else
+	TARGET_ARCH=`$PROG_PC_CC -dumpmachine`
+fi
+
+echo "$TARGET_ARCH"
+
+#if echo "$TARGET_ARCH" |grep msvc >${NULL}; then
+if [ "$TARGET_ARCH" == "msvc" ]; then
+	LINK_PREFIX="-link "
+	LINK_SUFFIX=".lib"
+	PC_CC_OPTS="-DTARGET=T_WIN32_MSC -TC -nologo"
+	PC_CC_SGT="-outputopt=-Fo -ppopts=-P"
+	PC_CC_OPTS_TOOL="-nologo"
+else
+	LINK_PREFIX="-l"
+	LINK_SUFFIX=""
+	PC_CC_OPTS="-DTARGET=T_UNIX -Wall"
+	PC_CC_OPTS_TOOL="-Wall"
+fi
+
+if echo "$TARGET_ARCH" |grep mingw >${NULL}; then
+	PC_CC_OPTS="-DTARGET=T_WIN32_MINGW -Wall"
+elif echo "$TARGET_ARCH" |grep linux >${NULL}; then
+	OBJDIR_PC=${PREFIX}/binLinux
+fi
+
+#
+# check_lib [library]
+# Check whether a library is available for linking (in native compilation)
+#
+check_lib ()
+{
+	echo "#include <$2>" >config$$.c
+	echo "int main() {}" >>config$$.c
+	if $PROG_PC_CC -o config$$ config$$.c ${LINK_PREFIX}${1}${LINK_SUFFIX} \
+		>${NULL} 2>${NULL}
+	then
+		rm -f config$$ config$$.o config$$.obj config$$.exe config$$.c
+		return 0
+	else
+		rm -f config$$ config$$.o config$$.obj config$$.exe config$$.c
+		return 1
+	fi
+}
+
+echo -n "Checking for curses... "
+if check_lib pdcurses "pdcurses.h"; then
+	echo pdcurses
+	PC_CC_LIBS=${LINK_PREFIX}pdcurses${LINK_SUFFIX}
+	CURSES_TYPE=CURSES_PDCURSES
+	CURSES_HEADER="<pdcurses.h>"
+elif check_lib ncurses "ncurses.h"; then
+	echo ncurses
+	PC_CC_LIBS=${LINK_PREFIX}ncurses${LINK_SUFFIX}
+	CURSES_TYPE=CURSES_NCURSES
+	CURSES_HEADER="<ncurses.h>"
+elif check_lib curses "curses.h"; then
+	echo curses
+	PC_CC_LIBS=${LINK_PREFIX}curses${LINK_SUFFIX}
+	CURSES_TYPE=CURSES_PLAIN_CURSES
+	CURSES_HEADER="<curses.h>"
+else
+	echo no
+	warn "Curses is required for native compilation."
+	build_computer=0
+fi
+
+
+if ! check_list "local C++ compiler" PROG_PC_CXX g++ c++ cc++ CC msvc cl; then
+	warn "No C++ compiler found. You will not be able to rebuild certain"\
+	     "parts of the program."
+	PROG_PC_CXX=g++    # For a clean makefile failure when needed
+fi
+
+
+if ! check_list "cpp" PROG_CPP cpp gcc; then
+	error "A separate C preprocessor is required to compile. Make sure cpp is"\
+	      "available on your path."
+else
+	if [ $PROG_CPP = "gcc" ]; then
+		PROG_CPP="gcc -E"
+	fi
+fi
+
+if ! check_list "m4" PROG_M4 m4; then
+	error "m4 is required to compile. Make sure it is available on your path. "\
+          "GNU m4 can be obtained from ftp://ftp.gnu.org/pub/gnu/m4/."
+fi
+
+
+if ! check_list "lex" PROG_LEX lex flex; then
+	warn "Couldn't find lex (or flex). You will not be able to rebuild"\
+	     "certain parts of the program."
+	PROG_LEX=lex
+fi
+
+
+if ! check_list "yacc" PROG_YACC yacc byacc bison; then
+	warn "Couldn't find yacc (or byacc, bison). You will not be able to"\
+	     "    rebuild certain parts of the program."
+	PROG_YACC=yacc
+fi
+
+
+if ! check_list "sgt" PROG_SGT sgt tools/sgt/sgt.exe tools/sgt/sgt; then
+	info "Couldn't find sgt. Compiling it now..."
+	( cd tools/sgt && make)
+	if [ -f  tools/sgt/sgt.exe ]; then
+		PROG_SGT=tools/sgt/sgt.exe
+	elif [ -f tools/sgt/sgt ]; then
+		PROG_SGT=tools/sgt/sgt
+	else
+		error "Failed to compile sgt."
+	fi
+fi
+
+
+#
+# Calculator-specific tools
+#
+if ! check_list "tigcc" PROG_TIGCC tigcc; then
+	build_ticalc=0
+fi
+
+if [ $build_ticalc = 1 ]; then
+	# Check version number
+	echo -n "Checking tigcc version... "
+	echo "
+	#include <tigcclib.h>
+	#if  __TIGCC_VERSION__<95 || (__TIGCC_VERSION==95 && __TIGCC_BETA__<11)
+	#	error "Out of data TIGCC"
+	#endif
+	" >config$$.c
+	if ! tigcc -c -o config$$.o config$$.c >${NULL} 2>${NULL}; then
+		echo "old"
+		warn "Your TIGCC version is out of date. You should upgrade to fix"\
+		     "bugs."
+	else
+		echo "ok"
+	fi
+	rm -f config$$.c config$$.o
+fi
+
+
+#
+# PalmOS-specific tools
+#
+if ! check_list "m68k-palmos-gcc" PROG_PALM_CC m68k-palmos-gcc; then
+	build_palmos=0
+fi
+
+if [ $build_palmos = 1 ]; then
+	if ! check_list "multigen" PROG_PALM_MULTIGEN m68k-palmos-multigen multigen
+	then
+		warn "multigen is required for compiling the PalmOS port. Make sure"\
+		     "prc-tools is correctly installed on the path and up to date."
+		build_palmos=0
+	fi
+fi
+
+if [ $build_palmos = 1 ]; then
+	if ! check_list "build-prc" PROG_BUILD_PRC build-prc; then
+		warn "build-prc is required for compiling the PalmOS port."
+		build_palmos=0
+	fi
+fi
+
+if [ $build_palmos = 1 ]; then
+	if ! check_list "pilrc" PROG_PILRC pilrc; then
+		warn "pilrc is required for compiling the PalmOS port."
+		build_palmos=0
+	fi
+fi
+
+
+#
+# Output
+#
+echo
+if [ $build_computer = 1 ]; then
+	echo "Will put local-system binaries in $OBJDIR_PC"
+else
+	echo "Will not build for local system"
+fi
+if [ $build_ticalc = 1 ]; then
+	echo "Will put TI-89 binaries in $OBJDIR_89"
+	echo "Will put TI-92+ binaries in $OBJDIR_92P"
+	echo "Will put V200 binaries in $OBJDIR_V200"
+else
+	echo "Will not build for TI-89/TI-92+/V200"
+fi
+if [ $build_palmos = 1 ]; then
+	echo "Will put PalmOS binaries in $OBJDIR_PALM"
+else
+	echo "Will not Build for PalmOS"
+fi
+
+echo
+
+MK_OUT=auto/configure.mk
+MAKEFILE=Makefile
+
+echo "Writing ${MAKEFILE}"
+echo "## Generated file
+##
+## Be sure to look through Makefile.config to set various tool options
+## and settings. You might also want to have a look at include/config.h
+##
+
+include make/Makefile.config
+include make/Makefile.all
+" >${MAKEFILE}
+echo "include make/Makefile.comp"      >> ${MAKEFILE}
+if [ $build_palmos = 1 ]; then
+	echo "include make/Makefile.palm"  >> ${MAKEFILE}
+fi
+if [ $build_ticalc = 1 ]; then
+	echo "include make/Makefile.calc"  >> ${MAKEFILE}
+fi
+
+
+
+
+echo "Writing $MK_OUT"
+
+echo "# Generated file
+CPP       := $PROG_CPP
+DATPP     := $PROG_M4
+LEX       := $PROG_LEX
+YACC      := $PROG_YACC
+CALC_CC   := $PROG_TIGCC
+CALC_LD   := $PROG_TIGCC
+SGT       := $PROG_SGT -l \$(LANGFILE)
+
+DEL       := rm -f
+BITBUCKET := /dev/null
+MOVE      := mv -f
+COPY      := cp
+MKDIR     := mkdir -p
+
+PALM_CC       := $PROG_PALM_CC
+PALM_LD       := $PROG_PALM_CC
+PALM_BUILDPRC := $PROG_BUILD_PRC
+PALM_MULTIGEN := $PROG_PALM_MULTIGEN
+PALM_PILRC    := $PROG_PILRC
+
+PC_CC          := $PROG_PC_CC
+PC_CC_SGT      := $PC_CC_SGT
+PC_LD          := $PROG_PC_CC
+PC_CC_LIBS     := $PC_CC_LIBS
+PC_CC_OPTS      := $PC_CC_OPTS
+PC_CC_OPTS_TOOL := $PC_CC_OPTS_TOOL
+
+OBJDIR_PC    := $OBJDIR_PC
+OBJDIR_89    := $OBJDIR_89
+OBJDIR_92P   := $OBJDIR_92P
+OBJDIR_V200  := $OBJDIR_V200
+OBJDIR_PALM  := $OBJDIR_PALM
+" >${MK_OUT}
+
+
+HEADER_OUT=auto/configure.h
+echo "Writing $HEADER_OUT"
+
+echo "// Generated file
+#ifdef USE_CURSES
+#	include $CURSES_HEADER
+#	define CURSES_PDCURSES 0
+#	define CURSES_NCURSES 1
+#	define CURSES_PLAIN_CURSES 2
+#	define CURSES_TYPE $CURSES_TYPE
+#endif
+" > ${HEADER_OUT}
+
+
+

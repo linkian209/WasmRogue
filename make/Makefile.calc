@@ -1,0 +1,89 @@
+
+## For TIGCC
+CALC_LD += -q --optimize-code --cut-ranges --merge-constants --reorder-sections
+CALC_PACK := -pack crogexe
+CALC_CC_OPTS := $(addprefix -I, $(INCLUDEPATH) sys/ticalc)
+CALC_CC_OPTS += -DTARGET_LANGUAGE=$(LANGUAGE)
+CALC_CC_OPTS += -q -Wall -Wno-sign-compare -Wdisabled-optimization
+CALC_CC_OPTS += -mregparm -fno-if-conversion -fno-optimize-sibling-calls \
+          -fomit-frame-pointer \
+          --optimize-code --cut-ranges --merge-constants --reorder-sections \
+          -ffunction-sections -fdata-sections
+OPTIMIZE=-Os     # Optimize for SIZE, not speed.
+                 # Part of the program is exempted from this, and will use -O2
+
+##############################################################################
+# Nothing beyond this line should need to be changed                         #
+##############################################################################
+
+CALC_CFILES=$(wildcard sys/ticalc/*.c) $(CFILES)
+CALC_HFILES=$(wildcard sys/ticalc/*.h) $(HFILES)
+
+$(OBJDIR_89):
+	$(MKDIR) $(OBJDIR_89)
+$(OBJDIR_92P):
+	$(MKDIR) $(OBJDIR_92P)
+$(OBJDIR_V200):
+	$(MKDIR) $(OBJDIR_V200)
+
+ti89 : $(OBJDIR_89)/crogdat1.89y $(OBJDIR_89)/crogue.89y \
+       $(OBJDIR_89)/crogdll.89y
+ti92p : $(OBJDIR_92P)/crogdat.9xy $(OBJDIR_92P)/crogue.9xy \
+        $(OBJDIR_92P)/crogdll.9xy
+all : ti89 ti92p
+
+##
+## TARGET: TI Calculators (shared)
+##
+#gamedat.out.ti: gamedat.med.ti $(MKDAT)
+#	$(echo) "  MKD " $<
+#	$(Q)$(SGT) -o $@ $(MKDAT) $(MKDATOPTS) -e $<
+$(OBJDIR_89)/crogdat1.89y: gamedat.med.ti $(MKDAT)
+	$(echo) "  MKD " $<
+	$(Q)$(SGT) -o crogdat $(MKDAT) $(MKDATOPTS) -f ticalc $<
+	$(Q) $(MOVE) crogdat*.89y $(OBJDIR_89)
+	$(Q)$(COPY) $@ $(OBJDIR_92P)/crogdat.9xy
+	$(Q)$(COPY) $@ $(OBJDIR_V200)/crogdat.v2y
+
+
+##
+## TARGET: TI-89
+##
+hack.89.o: sys/ticalc/hack.c $(CALC_CFILES) $(CALC_HFILES)
+	$(echo) "  CC  " $<
+	$(Q)$(SGT) -o $@ $(CALC_CC) $(CALC_CC_OPTS) $(OPTIMIZE) -DTARGET=T_TI89 -c $<
+hack_opt.89.o: sys/ticalc/hack_opt.c $(CALC_CFILES) $(CALC_HFILES)
+	$(echo) "  CC  " $<
+	$(Q)$(SGT) -o $@ $(CALC_CC) $(CALC_CC_OPTS) -O2 -DTARGET=T_TI89 -c $<
+$(OBJDIR_89)/crogue.89y $(OBJDIR_89)/crogue.89z: hack.89.o hack_opt.89.o
+	$(echo) "  LD  " $^
+	$(Q)$(CALC_LD) $^ -o crogue $(CALC_PACK)
+	$(Q)$(MOVE) crogue.89* $(OBJDIR_89)
+$(OBJDIR_89)/crogdll.89y : sys/ticalc/hack_dll.c $(DLL_CFILES)
+	$(echo) "  CC  " $<
+	$(Q)$(SGT) -o crogdll $(CALC_CC) $(CALC_CC_OPTS) $(OPTIMIZE) $< -DTARGET=T_TI89
+	$(Q)$(MOVE) crogdll.89y $(OBJDIR_89)/crogdll.89y
+	$(Q)$(DEL) crogdll.9x?
+
+##
+## TARGET: TI-92+
+##
+hack.92p.o: sys/ticalc/hack.c $(CALC_CFILES) $(CALC_HFILES)
+	$(echo) "  CC  " $<
+	$(Q)$(SGT) -o $@ $(CALC_CC) $(CALC_CC_OPTS) $(OPTIMIZE) -DTARGET=T_TI92P -c $<
+hack_opt.92p.o: sys/ticalc/hack_opt.c $(CALC_CFILES) $(CALC_HFILES)
+	$(echo) "  CC  " $<
+	$(Q)$(SGT) -o $@ $(CALC_CC) $(CALC_CC_OPTS) -O2 -DTARGET=T_TI92P -c $<
+$(OBJDIR_92P)/crogue.9xy $(OBJDIR_92P)/crogue.9xz: hack.92p.o hack_opt.92p.o
+	$(echo) "  LD  " $^
+	$(Q)$(CALC_LD) $^ -o crogue $(CALC_PACK)
+	$(Q)$(DEL) crogue.89*
+	$(Q)$(MOVE) crogue.9x* $(OBJDIR_92P)
+	$(Q)$(MOVE) crogue.v2* $(OBJDIR_V200)
+$(OBJDIR_92P)/crogdll.9xy: sys/ticalc/hack_dll.c $(DLL_CFILES)
+	$(echo) "  CC  " $<
+	$(Q)$(SGT) -o crogdll $(CALC_CC) $(CALC_CC_OPTS) $(OPTIMIZE) $< -DTARGET=T_TI92P
+	$(Q)$(MOVE) crogdll.9xy $(OBJDIR_92P)
+	$(Q)$(MOVE) crogdll.v2y $(OBJDIR_V200)
+	$(Q)$(DEL) crogdll.89y
+

@@ -1,0 +1,11 @@
+CalcRogue uses the following fonts:
+
+Name       Spacing    Source              Setting         Platform          Filename
+ F_4x6      Variable   Texas Instruments   Small font      TI-68k            N/A
+ F_4x6Free  Variable   Jeff Ohlstein       Single-density  PalmOS            sys/palm/Font4x6Free.txt
+ F_5x7      Variable   Jim Babcock         Medium font     TI-68k, (PalmOS)  src/tiles.c
+ F_6x8      Monospace  Texas Instruments   Large font      TI-68k            N/A
+ ANSI 8x12  Monospace  Standard            Double-density  PalmOS            sys/palm/Font8x12.txt
+ tiles_5x5  Tile       Jim Babcock         Small tileset   TI-68k, PalmOS    src/tiles.c
+ tiles_7x7  Tile       Jim Babcock         Large tileset   TI-68k            src/tiles.c, sys/palm/FontTile5x5.txt
+
